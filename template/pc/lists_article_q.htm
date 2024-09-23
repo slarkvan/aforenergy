@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit" />
+  <title>{$eyou.field.seo_title}-{eyou:global name='web_name' /}</title>
+  <meta name="description" content="{$eyou.field.seo_description}" />
+  <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+
+  {eyou:static file='skin/css/iframe.css' /}
+  <!-- public start -->
+
+  {eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /}
+  {eyou:static file='skin/css/slick.css' /}
+
+  {eyou:static file='skin/css/slick-theme.css' /}
+
+  {eyou:static file='skin/css/animate.min.css' /}
+
+  {eyou:static file='skin/css/base-v1.4.css' /}
+
+  {eyou:static file='skin/css/jquery.mCustomScrollbar.min.css' /}
+
+  {eyou:static file='skin/css/animate.min.css' /}
+
+  {eyou:static file='skin/css/iconfont.css' /}
+
+  {eyou:static file='skin/css/main.css' /}
+
+  {eyou:static file='skin/css/media.css' /}
+
+  {eyou:static file='skin/css/he_base.css' /}
+
+  {eyou:static file='skin/css/swiper.min.css' /}
+</head>
+
+<body>
+
+  <!-- 头部文件 -->
+  {eyou:include file="head.htm" /}
+
+  <!-- 内页banner -->
+  <div class="he_banbx he_banbx1">
+    <div class="he_banli">
+      <div class="he_banig">
+        <img src="{$eyou.field.typelitpic}" class="he_banpc" alt="">
+        <img src="{$eyou.field.typelitpic}" class="he_banph" alt="">
+      </div>
+      <!-- banner文字 -->
+      <div class="he_bante">
+        <div class="he_conten1">
+          <div class="he_bantnv">
+            <div class="he_bantti1">
+              <h1>
+                <p>{$eyou.field.typename} </p>
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 主体内容 -->
+  <div class="he_main">
+    <div class="s_content">
+
+      <div class="s_d2content s_d3content">
+        <!--面包屑-->
+        <div class="he_bordkm">
+          <div class="s_cont1360">
+            <div class="he_bordul clearfix">
+              <div class="he_bordfr fl">
+                <a href="/"> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg" alt=""
+                    class="he_int1" /> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg" alt=""
+                    class="he_int2" /> </a>
+              </div>
+              <div class="he_bordli fl">
+                &gt;
+                {eyou:position style=' '/}
+              </div>
+            </div>
+          </div>
+          <div class="s_d2cont1 s_cont1514">
+            <!--<div class="s_d2c1tit font1 wow g_fadeup1">-->
+            <!--<h2></h2>-->
+            <!--</div>-->
+            <div class="s_d3cont clearfix">
+              <div class="s_d3contl fl">
+
+                {eyou:models loop="100" typeid="76" type="son" id="field"}
+                <div
+                  class="s_d3contlnr wow g_fadeup1 {eyou:if condition='$eyou.field.typeid === $field.typeid'} act {/eyou:if}">
+                  <a href="{$field.typeurl}">
+                    <div class="s_d3conttw clearfix">
+                      <div class="s_d3contwig">
+                        <img src="{$field.icon}" alt="{$field.icon}" />
+                      </div>
+                      <div class="s_d3contwz font1 fr">
+                        <h4>{$field.typename}</h4>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                {/eyou:models}
+              </div>
+
+
+              <div class="s_d3contr fr">
+                {eyou:list loop="100" }
+                  {eyou:arcview  aid="$field.aid" id="fieldView" }
+                    <div class=" yxedr_active font1 g_fadeup1" style="margin-top: 20px;">
+                      {$fieldView.content}
+                    </div>
+                  {/eyou:arcview}
+                    <!-- <div class=" yxedr_active font1 g_fadeup1" style="margin-top: 20px;">
+                      {$field.content}
+                    </div> -->
+                {/eyou:list}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    {eyou:include file="bottom.htm" /}
+
+    <!-- public end -->
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      $(".s_d3contlnr").click(function () {
+        var index = $(this).index();
+        $(this).addClass("act");
+        $(this).siblings().removeClass("act");
+        $(".s_d3contrnr").eq(index).stop().fadeIn().siblings(".s_d3contrnr").stop().hide();
+        $(".s_d3contrnr")[index].slick.refresh();
+      })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,385 @@
+<!--
+ * @Author: ZhouQishun
+ * @Date: 2024-01-04 10:45:05
+ * @LastEditTime: 2024-01-04 17:23:36
+ * @LastEditors: ZhouQishun
+ * @Description: 1.0.0
+ * @FilePath: \afceshixin.weibaoke.com.cn\template\pc\lists_guestbook_a.htm
+ *
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="renderer" content="webkit" />
+  <title>{$eyou.field.seo_title}-{eyou:global name='web_name' /}</title>
+  <meta name="description" content="{$eyou.field.seo_description}" />
+  <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+
+  {eyou:static file='skin/css/iframe.css' /}
+  <!-- public start -->
+
+  {eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /}
+  {eyou:static file='skin/css/slick.css' /}
+
+  {eyou:static file='skin/css/slick-theme.css' /}
+
+  {eyou:static file='skin/css/animate.min.css' /}
+
+  {eyou:static file='skin/css/base-v1.4.css' /}
+
+  {eyou:static file='skin/css/jquery.mCustomScrollbar.min.css' /}
+
+  {eyou:static file='skin/css/animate.min.css' /}
+
+  {eyou:static file='skin/css/iconfont.css' /}
+
+  {eyou:static file='skin/css/main.css' /}
+
+  {eyou:static file='skin/css/media.css' /}
+
+  {eyou:static file='skin/css/he_base.css' /}
+
+  {eyou:static file='skin/css/swiper.min.css' /}
+</head>
+<style>
+  .inverter-serial-number-label {
+    position: relative;
+  }
+  .inverter-serial-number-label:hover .inverter-serial-number{
+    display: block;
+  }
+  .inverter-serial-number {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    z-index: 1;
+    left: 100%;
+    top: 0;
+    display: none;
+  }
+  .inverter-serial-number img {
+    width: 500px;
+    height: 300px;
+  }
+
+  .my-form {
+
+  }
+  .my-form {
+
+  }
+</style>
+
+<body>
+  <div class="he_nyym he_k2ym">
+
+    {eyou:include file="head.htm" /}
+
+    <!-- 内页banner -->
+    <div class="he_banbx he_banbx1">
+      <div class="he_banli">
+        <div class="he_banig">
+          <img src="{$eyou.field.typelitpic}" class="he_banpc" alt="">
+          <img src="{$eyou.field.typelitpic}" class="he_banph" alt="">
+        </div>
+        <!-- banner文字 -->
+        <div class="he_bante">
+          <div class="he_conten1">
+            <div class="he_bantnv">
+              <div class="he_bantti1">
+                <h1>{$eyou.field.typename}</h1>
+              </div>
+              <div class="he_c03xioti">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="he_main">
+      <!--面包屑-->
+      <div class="he_bordkm">
+        <div class="s_cont1360">
+          <div class="he_bordul clearfix">
+            <div class="he_bordfr fl">
+              <a href="/"> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg" alt=""
+                  class="he_int1" /> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg" alt=""
+                  class="he_int2" /> </a>
+            </div>
+            <div class="he_bordli fl">
+              &gt;
+              {eyou:position style=' '/}
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="he_k2p1">
+        <div class="he_conten1">
+          <div class="he_k2p1n row">
+            {eyou:form type="auto" formid="2" id="field"}
+            <form class="form-horizontal my-form col-lg-10 col-lg-offset-1" method="POST" {$field.formhidden} action="{$field.action}"
+              onsubmit="{$field.submit}">
+
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="attr_30" class="col-sm-4 control-label">
+                    <span class="text-danger">*</span>
+                    <span>{$field.itemname_30}</span>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_30" name="{$field.attr_30}"
+                      placeholder="Please enter {$field.itemname_30}">
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="attr_30" class="col-sm-4 control-label">
+                    <span class="text-danger">*</span>
+                    <span>{$field.itemname_31}</span>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_31" name="{$field.attr_31}"
+                      placeholder="Please enter {$field.itemname_31}">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="attr_32" class="col-sm-4 control-label inverter-serial-number-label">
+                    <span class="text-danger">*</span>
+                    <span>{$field.itemname_32}</span>
+                    <span class="glyphicon glyphicon-question-sign" style="cursor: pointer;" aria-hidden="true"></span>
+                    <div class="inverter-serial-number">
+                      <img src="{eyou:global name='web_templets_pc' /}/skin/img/xlh.jpg" alt="">
+                    </div>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_32" name="{$field.attr_32}"
+                      placeholder="Please enter {$field.itemname_32}">
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="attr_33" class="col-sm-4 control-label">
+                    <span class="text-danger">*</span>
+                    <span>{$field.itemname_33}</span>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_33" name="{$field.attr_33}"
+                      placeholder="Please enter {$field.itemname_33}">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="attr_34" class="col-sm-4 control-label">
+                    <span class="text-danger">*</span>
+                    <span>{$field.itemname_34}</span>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_34" name="{$field.attr_34}"
+                      placeholder="Please enter {$field.itemname_34}">
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="attr_35" class="col-sm-4 control-label">
+                    <span class="text-danger" style="display: none;">*</span>
+                    <span>{$field.itemname_35}</span>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_35" name="{$field.attr_35}"
+                      placeholder="Please enter {$field.itemname_35}">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="attr_36" class="col-sm-4 control-label">
+                    <span class="text-danger" style="display: none;">*</span>
+                    <span>{$field.itemname_36}</span>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_36" name="{$field.attr_36}"
+                      placeholder="Please enter {$field.itemname_36}">
+                  </div>
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="attr_37" class="col-sm-4 control-label">
+                    <span class="text-danger" style="display: none;">*</span>
+                    <span>{$field.itemname_37}</span>
+                  </label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="attr_37" name="{$field.attr_37}"
+                      placeholder="Please enter {$field.itemname_37}">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <div class="" style="padding: 10px 50px; font-size: 18px;">Fault performance</div>
+                </div>
+                <div class="form-group col-md-8">
+                  <label for="attr_38" class="col-sm-5 control-label">
+                    <span class="text-danger">*</span>
+                    <span>{$field.itemname_38}</span>
+                    <!-- <span class="glyphicon glyphicon-question-sign" style="cursor: pointer;" aria-hidden="true"></span> -->
+                  </label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="attr_38" name="{$field.attr_38}"
+                      placeholder="For example：E0/E6/E11">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-3">
+                  <div class="" style="padding: 10px 30px;">LED display</div>
+                </div>
+                <div class="form-group col-md-9">
+                  <div class="row">
+                    <label for="attr_39" class="col-sm-3 control-label">
+                      <span class="text-danger" style="display: none;">*</span>
+                      <span>{$field.itemname_39}</span>
+                    </label>
+
+                    <div class="form-group col-sm-9">
+                      {eyou:volist name="$field.options_39" id="vo"}
+                          <div class="col-sm-6" style="display: flex; align-items: center;">
+                            <input type="radio" id="attr_39" name="{$field.attr_39}" value="{$vo.value}" style="appearance: auto; margin-right: 10px;" />
+                            <label for="attr_39 control-label">
+                              {$vo.value}
+                            </label>
+                          </div>
+                      {/eyou:volist}
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <label for="attr_40" class="col-sm-3 control-label">
+                      <span class="text-danger" style="display: none;">*</span>
+                      <span>{$field.itemname_40}</span>
+                    </label>
+
+                    <div class="form-group col-sm-9">
+                      {eyou:volist name="$field.options_40" id="vo"}
+                          <div class="col-sm-6" style="display: flex; align-items: center;">
+                            <input type="radio" id="attr_40" name="{$field.attr_40}" value="{$vo.value}" style="appearance: auto; margin-right: 10px;" />
+                            <label for="attr_40 control-label">
+                              {$vo.value}
+                            </label>
+                          </div>
+                      {/eyou:volist}
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <label for="attr_41" class="col-sm-3 control-label">
+                      <span class="text-danger" style="display: none;">*</span>
+                      <span>{$field.itemname_41}</span>
+                    </label>
+
+                    <div class="form-group col-sm-9">
+                      {eyou:volist name="$field.options_41" id="vo"}
+                          <div class="col-sm-6" style="display: flex; align-items: center;">
+                            <input type="radio" id="attr_41" name="{$field.attr_41}" value="{$vo.value}" style="appearance: auto; margin-right: 10px;" />
+                            <label for="attr_41 control-label">
+                              {$vo.value}
+                            </label>
+                          </div>
+                      {/eyou:volist}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="form-group col-md-10">
+                  <label for="attr_42" class="col-sm-3 control-label">
+                    <span class="text-danger" style="display: none;">*</span>
+                    <span>{$field.itemname_42}</span>
+                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true" style="display: none;"></span>
+                  </label>
+                  <div class="col-sm-9">
+                    <textarea type="text" class="form-control" id="attr_42" name="{$field.attr_42}"
+                      placeholder="For example, after the inverter countdown is completed, the display shows that the grid voltage is abnormal and the inverter FAULT light is on."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              {eyou:notempty name='$field.IsVertify'}
+              <div class="row">
+                <div class="form-group col-md-12">
+                  <label for="" class="col-sm-3 control-label">
+                    <span class="text-danger">*</span>
+                    <span>Image verification code</span>
+                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true" style="display: none;"></span>
+                  </label>
+                  <div class="col-sm-9" style="display: flex; align-items: center;">
+                    <div class="col-sm-6">
+                      <input {$field.realValidate.verifyInput} class="form-control" id="attr_38" name="{$field.attr_38}"
+                      placeholder="Please enter Image verification code">
+                    </div>
+                    <div class="col-sm-3">
+                      <img {$field.realValidate.verifyImg} title="Can't see? Click to replace the verification code" style="height: 50px;" class=""/>
+                    </div>
+                    <div class="col-sm-2">
+                      <a {$field.realValidate.verifyClick} class="">Click to replace</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/eyou:notempty}
+
+              <div class="row" style="margin-top: 20px;">
+                <div class="form-group col-md-12">
+                  <label for="attr_42" class="col-sm-12">
+                    <span class="text-danger">*</span>
+                    <span>is a required option, please rest assured that any of your personal information will not be leaked, only the company is available. After-sales service call: +86-21-54326236</span>
+                    <span class="glyphicon glyphicon-question-sign" aria-hidden="true" style="display: none;"></span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="eyou_form_attr row" style="margin-top: 30px;">
+                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
+                  <button class="eyou_form_btn btn btn-danger btn-lg btn-block" type="submit">submit</button>
+                </div>
+              </div>
+
+              {$field.hidden}
+            </form>
+            {/eyou:form}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+
+
+    {eyou:include file="bottom.htm" /}
+    <!-- public end -->
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+
+    </script>
+
+</body>
+
+</html>

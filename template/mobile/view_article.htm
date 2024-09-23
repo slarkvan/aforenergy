@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <meta name="format-detection" content="telephone=no, email=no" /> 
+  <meta name="renderer" content="webkit" /> 
+   <title>{$eyou.field.title}-{eyou:global name='web_name' /}</title>
+<meta name="description" content="{$eyou.field.seo_description}" />
+<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+ 
+    {eyou:static file='skin/css/iframe.css' /}
+  <!-- public start --> 
+ 
+   {eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /}
+   {eyou:static file='skin/css/slick.css' /}
+  
+    {eyou:static file='skin/css/slick-theme.css' /}
+   
+    {eyou:static file='skin/css/animate.min.css' /}
+  
+  {eyou:static file='skin/css/base-v1.4.css' /}
+  
+  {eyou:static file='skin/css/jquery.mCustomScrollbar.min.css' /}
+  
+  {eyou:static file='skin/css/animate.min.css' /}
+  
+   {eyou:static file='skin/css/iconfont.css' /}
+  
+   {eyou:static file='skin/css/main.css' /}
+   
+  {eyou:static file='skin/css/media.css' /}
+  
+   {eyou:static file='skin/css/he_base.css' /}
+
+ {eyou:static file='skin/css/swiper.min.css' /}
+ </head> 
+ <body>
+<div class="he_nyym he_b2g3ye">
+   {eyou:include file="head.htm" /}
+
+   <!-- banner --> 
+   <!-- 主体内容 --> 
+   <div class="he_main"> 
+    <div class="s_content"> 
+     <!--面包屑--> 
+
+     <div class="he_bordkm"> 
+     <div class="s_cont1360"> 
+      <div class="he_bordul clearfix"> 
+       <div class="he_bordfr fl"> 
+       <a href="/"> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg" alt="" class="he_int1" /> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg" alt="" class="he_int2" /> </a> 
+       </div> 
+       <div class="he_bordli fl">
+         &gt; 
+       {eyou:position style=' '/}
+
+       </div>
+      
+      </div> 
+     </div> 
+    </div> 
+
+     <div class="s_b2_3cont1 s_cont1206 clearfix jian1" data-sticky-container=""> 
+      <div class="s_b2_3contr fr selector" data-margin-top="120"> 
+       <div class="s_b2_3share"> 
+        <div class="s_b2_3sharewz p16">
+         Share
+        </div> 
+        <div class="s_b2_3sharebot"> 
+         <div class="s_b2_3sharebox"> 
+          <div class="s_b2_3sharenr he_ftbslt"> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/1.ins.svg" alt="douyin.svg" class="s_b2_3sharenr1" /> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/1.ins-180.svg" alt="douyin1.svg" class="s_b2_3sharenr2" /> 
+          </div> 
+        
+         </div> 
+         <div class="s_b2_3sharebox"> 
+          <div class="s_b2_3sharenr he_ftbslt"> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/2.Facebook-888.svg" alt="shipinhao.svg" class="s_b2_3sharenr1" /> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/2.Facebook.svg" alt="shipinhao1.svg" class="s_b2_3sharenr2" /> 
+          </div> 
+          
+         </div> 
+         <div class="s_b2_3sharebox bshare-custom "> 
+          <div class="s_b2_3sharenr"> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/3.twiter-248.svg" alt="weibo.svg" class="s_b2_3sharenr1" /> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/3.twiter.svg" alt="weibo1.svg" class="s_b2_3sharenr2" /> 
+          </div> 
+          
+         </div> 
+         <div class="s_b2_3sharebox bshare-custom "> 
+          <div class="s_b2_3sharenr"> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/4.lingying-857.svg" alt="weixin.svg" class="s_b2_3sharenr1" /> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/4.lingying.svg" alt="weixin1.svg" class="s_b2_3sharenr2" /> 
+          </div> 
+          
+         </div> 
+          <div class="s_b2_3sharebox bshare-custom "> 
+          <div class="s_b2_3sharenr"> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/youtobe%401x-759.svg" alt="weixin.svg" class="s_b2_3sharenr1" /> 
+           <img src="{eyou:global name='web_templets_pc' /}/skin/img/youtobe%401xyuanse-825.svg" alt="weixin1.svg" class="s_b2_3sharenr2" /> 
+          </div> 
+          
+         </div> 
+
+        </div> 
+       </div> 
+      </div> 
+      <div class="s_b2_3contl fl"> 
+       <div class="s_b2_3contltop"> 
+        <div class="s_b2_3contltime p20">
+          {$eyou.field.add_time|MyDate='Y-m-d H:i:s',###}
+        </div> 
+        <div class="s_b2_3contltit font1 he_fonts"> 
+         <h1>{$eyou.field.title}</h1> 
+        </div> 
+     
+       </div> 
+       <div class="s_b2_3conlbjq pra yxedr_active"> 
+        <p><span style="color: rgb(89, 89, 89); font-size: 14px;">
+
+         {$eyou.field.content}
+
+        </p> 
+       </div> 
+       <div class="s_b2_3contlsx clearfix"> 
+        <div class="s_b2_3contlsxnr fl"> 
+       
+
+           {eyou:beafter get='pre'}
+    <a href="{$field.arcurl}">PREVIOUS : {$field.title}</a>
+{eyou:else /}
+    <a></a>
+{/eyou:beafter}
+
+        </div> 
+
+
+
+        <div class="s_b2_3contlsxnr fr"> 
+       
+        {eyou:beafter get='next'}
+    <a href="{$field.arcurl}">NEXT : {$field.title}</a>
+{eyou:else /}
+    <a></a>
+{/eyou:beafter}
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+     <div class="s_b2_3cont2"> 
+      <div class="s_b2_3c2nr s_cont1514"> 
+       <div class="s_b2_3c2tit font1"> 
+        <h2>Recommended</h2> 
+       </div> 
+       <div class="s_b2_3c2main clearfix"> 
+        {eyou:artlist loop="3"  typeid="2"  titlelen="60" }
+        <div class="s_b2_3c2list fl"> 
+         <a href="{$field.arcurl}"> 
+          <div class="s_b2_3c2li"> 
+           <div class="s_b2_3c2litop"> 
+            <span> </span> 
+           </div> 
+           <div class="s_b2_3c2linr">
+             
+           {$field.title}
+           </div> 
+           <div class="s_b2_3c2libot clearfix"> 
+            <div class="s_b2_3libotl fl p16">
+              MORE
+            </div> 
+            <div class="s_b2_2c2wztop p16 fr"> 
+             <p>{$field.add_time|MyDate='Y-m-d',###}</p> 
+            </div> 
+           </div> 
+          </div> </a> 
+        </div>
+        {/eyou:artlist}
+        
+       
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+     {eyou:include file="bottom.htm" /}
+ 
+  
+     {eyou:static file='skin/js/sticky.min.js' /}
+  <script>
+    new WOW().init();
+</script> 
+  <script>
+    var sticky = new Sticky('.selector');
+
+  $(".s_b2_3c2main").slick({
+            slidesToShow: 3,
+            autoplay: true,
+      dots:true,
+            responsive: [
+      {
+                breakpoint: 769,
+                settings: {
+          slidesToShow: 2,
+          dots:true,
+                }
+            },
+      {
+                breakpoint: 480,
+                settings: {
+          slidesToShow: 1,
+          dots:true,
+                }
+            }
+    ]
+        })
+    $(function () {
+
+    bShare.addEntry({
+      title: encodeURI('分享到微博'),
+      summary: encodeURI('随时随地分享身边的新鲜事'),
+      // pic: encodeURI("http://qd.hongwenfeh.com/"+$(".w_d2_rightnr img").eq(0).attr("src"))
+    });
+
+    })
+
+
+</script> 
+</div>
+ </body>
+</html>

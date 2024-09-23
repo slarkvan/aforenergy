@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <meta name="renderer" content="webkit" />
+        <title>{$eyou.field.seo_title}-{eyou:global name='web_name' /}</title>
+        <meta name="description" content="{$eyou.field.seo_description}" />
+        <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+
+        {eyou:static file='skin/css/iframe.css' /}
+        <!-- public start -->
+
+        {eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /}
+        {eyou:static file='skin/css/slick.css' /}
+
+        {eyou:static file='skin/css/slick-theme.css' /}
+
+        {eyou:static file='skin/css/animate.min.css' /}
+
+        {eyou:static file='skin/css/base-v1.4.css' /}
+
+        {eyou:static file='skin/css/jquery.mCustomScrollbar.min.css' /}
+
+        {eyou:static file='skin/css/animate.min.css' /}
+
+        {eyou:static file='skin/css/iconfont.css' /}
+
+        {eyou:static file='skin/css/main.css' /}
+
+        {eyou:static file='skin/css/media.css' /}
+
+        {eyou:static file='skin/css/he_base.css' /}
+
+        {eyou:static file='skin/css/swiper.min.css' /}
+    </head>
+    <body>
+
+
+        <!-- 头部文件 -->
+        {eyou:include file="head.htm" /}
+        <!-- 内页banner -->
+
+
+
+        <!-- 内页banner -->
+        <div class="he_banbx he_banbx1">
+            <div class="he_banli">
+                <div class="he_banig">
+                    <img src="{$eyou.field.typelitpic}" class="he_banpc" alt="">
+                    <img src="{$eyou.field.typelitpic}" class="he_banph" alt="">
+                </div>
+                <!-- banner文字 -->
+                <div class="he_bante">
+                    <div class="he_conten1">
+                        <div class="he_bantnv">
+                            <div class="he_bantti1">
+                                <h1>{$eyou.field.typename} <p></p>
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 主体内容 -->
+        <div class="he_main">
+            <div class="he_nybx">
+                <div class="he_c03bx">
+                    <div class="he_c03p1">
+                        <div class="s_cont1360">
+                            <div class="he_c03bn clearfix" data-sticky-container="">
+                                <!--面包屑-->
+                                <div class="he_bordkm">
+                                    <div class="s_cont1360">
+                                        <div class="he_bordul clearfix">
+                                            <div class="he_bordfr fl">
+                                                <a href="/">
+                                                    <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg" alt="" class="he_int1" />
+                                                    <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg" alt="" class="he_int2" />
+                                                </a>
+                                            </div>
+                                            <div class="he_bordli fl">
+                                                &gt;
+                                                {eyou:position style=' '/}
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="he_c03bnle fl">
+                                    <div class="he_c03bsul">
+                                        <div class="he_c03bcli he_d1bxli" id="1">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/lanmutubiao/Residential-PV-Solutions.png">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft">Residential PV Solutions</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                   {eyou:artlist loop="9"  typeid="20" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                    
+                                                   
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="he_c03bcli he_d1bxli" id="2">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/lanmutubiao/Commercial-Utility-PV-Soulutions.png" alt="wuding.svg">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft"> Commercial & Utility PV Solutions</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                    {eyou:artlist loop="9"  typeid="21" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                   
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="he_c03bcli he_d1bxli" id="3">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/lanmutubiao/Residential-Storage-Solutions.png" alt="dianli.svg">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft"> Residential Storage Solutions</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                 {eyou:artlist loop="9"  typeid="22" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                  
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="he_c03bcli he_d1bxli" id="4">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/lanmutubiao/Commercial-Industrial-Storage-Solutions.png" alt="">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft"> Commercial & Industrial Storage Solutions</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                   {eyou:artlist loop="9"  typeid="69" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                 
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="he_c03bcli he_d1bxli" id="5">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/lanmutubiao/Smart-Energy.png">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft">Smart Energy</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                    {eyou:artlist loop="9"  typeid="70" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                  
+                                                  
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="he_c03bcli he_d1bxli" id="5">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/lanmutubiao/Accessories.png">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft">Accessories</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                    {eyou:artlist loop="50"  typeid="94" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                  
+                                                  
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                       <!--  <div class="he_c03bcli he_d1bxli" id="6">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/img/Frame49.svg" alt="Frame49.svg">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft">Smart Monitoring System</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                   {eyou:artlist loop="9"  typeid="20" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                   
+                                                 
+
+
+
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                      <!--   <div class="he_c03bcli he_d1bxli" id="7">
+                                            <div class="he_c03bti">
+                                                <div class="he_c03btdt clearfix wow g_fadeup1">
+                                                    <div class="he_c03btile fl">
+                                                        <img src="{eyou:global name='web_templets_pc' /}/skin/img/fujian3tubiaodaxiaoyanseshiliPVBM-01.svg" alt="fujian3tubiaodaxiaoyanseshiliPVBM-01.svg">
+                                                    </div>
+                                                    <div class="he_c03btiri fl">
+                                                        <h2 class="he_x40ft">Accessories</h2>
+                                                    </div>
+                                                </div>
+                                                <div class="he_c03btkx wow g_fadeup1">
+                                                    <p>If you need more product information, please contact customer service</p>
+                                                </div>
+                                            </div>
+                                            <div class="he_c03bxf">
+                                                <div class="he_c03xul">
+                                                 {eyou:artlist loop="9"  typeid="20" }
+
+                                                    <div class="he_c03xli wow g_fadeup1">
+                                                        <a href="{$field.arcurl}">
+                                                            <div class="he_c03xlm">
+                                                                <div class="he_c03xlk">
+                                                                    <div class="he_c03xlti">
+                                                                        <p>{$field.title}</p>
+                                                                    </div>
+                                                                    <div class="he_c03xlcp">
+                                                                        <p>{eyou:field aid='$field.aid' addfields='cpxinghao' /} </p>
+                                                                    </div>
+                                                                    <div class="he_c03cig">
+                                                                        <img src="{$field.litpic}" class="he_img">
+                                                                        <img src="{$field.litpic}" class="he_img1">
+                                                                    </div>
+                                                                    <div class="he_c03ctw">
+                                                                        <p>MORE</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                   {/eyou:artlist}
+
+                                                   
+                                                  
+
+
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="he_c03bnri fr">
+                                    <div class="he_c03bnhw ">
+                                        <div class="he_c03cnv selector" data-margin-top="120">
+                                            <div class="he_c03cnti">
+                                                <p></p>
+                                            </div>
+                                            <div class="he_c03cul">
+                                                <div class="he_c03cli act">
+                                                    <p>
+                                                        <a href="#1" style="color: #333333">Single Phase Inverter</a>
+                                                    </p>
+                                                </div>
+                                                <div class="he_c03cli ">
+                                                    <p>
+                                                        <a href="#2" style="color: #333333">Three Phase Inverter</a>
+                                                    </p>
+                                                </div>
+                                                <div class="he_c03cli ">
+                                                    <p>
+                                                        <a href="#3" style="color: #333333">Energy Storage Inverter</a>
+                                                    </p>
+                                                </div>
+                                                <div class="he_c03cli ">
+                                                    <p>
+                                                        <a href="#4" style="color: #333333">Monitoring System</a>
+                                                    </p>
+                                                </div>
+                                                <div class="he_c03cli ">
+                                                    <p>
+                                                        <a href="#5" style="color: #333333">Accessories</a>
+                                                    </p>
+                                                </div>
+                                               <!--  <div class="he_c03cli ">
+                                                    <p>
+                                                        <a href="#6" style="color: #333333">Smart Monitoring System</a>
+                                                    </p>
+                                                </div>
+                                                <div class="he_c03cli ">
+                                                    <p>
+                                                        <a href="#7" style="color: #333333">Accessories</a>
+                                                    </p>
+                                                </div> -->
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="he_c03p2">-->
+                        <!--<div class="s_cont1360">-->
+                        <!--<div class="he_c03p2ul clearfix">-->
+                        <!---->
+                        <!--<div class="he_c03p2li fl  wow g_fadeup1">-->
+                        <!--<div class="he_c03p2cf">-->
+                        <!--<div class="he_c03p2ti">-->
+                        <!--<p></p>-->
+                        <!--</div>-->
+                        <!--<div class="he_c03p2jc yxedr_active">-->
+                        <!---->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!---->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="he_c03p3">-->
+                        <!--<div class="s_cont1360">-->
+                        <!--<div class="he_c03p3n">-->
+                        <!--<div class="he_c03p3ti wow g_fadeup1">-->
+                        <!--<h2 class="he_x40ft"></h2>-->
+                        <!--</div>-->
+                        <!--<div class="he_c03p3ul">-->
+                        <!--<div class="he_c03p3gc clearfix wow g_fadeup1">-->
+                        <!---->
+                        <!--<div class="he_c03p3li fl">-->
+                        <!--<a href="" target="">-->
+                        <!--<div class="he_c03p3kx">-->
+                        <!--<div class="he_c03p3ig">-->
+                        <!--<img src="/Public/Cn/images/c03ifl.png" alt="" class="he_img">-->
+                        <!--<img src="" alt="" class="he_img1">-->
+                        <!--</div>-->
+                        <!--<div class="he_c03p3tr">-->
+                        <!--<div class="he_c03p3tgf">-->
+                        <!--<div class="he_c03p3eti">-->
+                        <!--<p></p>-->
+                        <!--</div>-->
+                        <!--<div class="he_c03p3to">-->
+                        <!--<p></p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="he_c03p3tnk">-->
+                        <!--<p>更多</p>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</a>-->
+                        <!--</div>-->
+                        <!---->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            new WOW().init();
+        </script>
+
+        <script>
+            var sticky = new Sticky('.selector');
+                    // 侧边滚动条
+                    $(function () {
+                        $(function () {
+                            var scrollInertiaNum;
+                            if (/firefox/.test(navigator.userAgent.toLowerCase())) {
+                                scrollInertiaNum = 200;
+                            } else {
+                                scrollInertiaNum = 200;
+                            }
+                            $(".he_c03cul").mCustomScrollbar({
+                                theme: 'dark',
+                                scrollInertia: scrollInertiaNum,
+                                horizontalScroll: false,
+                                axis: "y",
+                                // scrollbarPosition: "outside",
+                            });
+                        });
+                    })
+            
+                    //侧边导航
+                    asideNav();
+            
+                    function asideNav() {
+                        var $nav = $(".he_c03cul"); //侧边导航最外面的盒子
+                        var $nav_li = $(".he_c03cli"); //侧边导航循环的部分
+                        var $section = $(".he_c03bcli"); //每个模块
+                        var $main = $(".he_c03bsul"); //侧边导航显示的区域
+                        var topArr = []; //每个模块距离页面最顶部的距离
+                        var navHeight = 0; //导航条的高度
+                        var beforeIndex = 0; //之前所在模块的index
+                        var nowIndex = 0; //现在所在模块的index
+            
+                        // 初始化
+                        asideInit();
+                        // 页面加载完重新初始化
+                        $(window).on("load", function () {
+                            asideInit();
+                        });
+                        // 页面尺寸改变重新初始化
+                        $(window).resize(function () {
+                            asideInit();
+                        });
+            
+                        // 滚动事件监听
+                        $(window).scroll(function () {
+                            asideNavTb();
+                            judgeEnter();
+                        });
+            
+                        //导航点击滚动到相应位置
+                        $nav_li.click(function () {
+                            var index = $(this).index();
+                            $("html,body").stop().animate({
+                                "scrollTop": topArr[index] - navHeight
+                            }, 500);
+                        });
+            
+                        // 获取参数
+                        function getPara() {
+                            $section.each(function (index, item) {
+                                var top = $(this).offset().top;
+                                topArr[index] = top;
+                            });
+                            navHeight = 80;
+                        }
+                        //左侧样式同步
+                        function asideNavTb() {
+                            for (var i = 0; i < topArr.length; i++) {
+                                if ($(window).scrollTop() > topArr[i] - $(window).height() / 3) {
+                                    nowIndex = i;
+                                }
+                            }
+                            if (nowIndex != beforeIndex) {
+                                beforeIndex = nowIndex;
+                                $nav_li.eq(nowIndex).addClass("act").siblings().removeClass("act");
+                            }
+                        };
+            
+                        function judgeEnter() {
+                            var itemTop = $nav.offset().top - $(window).scrollTop();
+                            var itemBot = itemTop + $nav.height();
+                            var containerTop = $main.offset().top - $(window).scrollTop();
+                            var containerBot = containerTop + $main.height();
+                            if (itemTop - containerTop > 0) {
+                                $nav.addClass("start");
+                            } else {
+                                $nav.removeClass("start");
+                            }
+                            if (itemBot - containerBot > 0) {
+                                $nav.addClass("end");
+                            } else {
+                                $nav.removeClass("end");
+                            }
+                        }
+            
+                        function asideInit() {
+                            getPara();
+                            asideNavTb();
+                            judgeEnter();
+                        }
+                    }
+            
+                    // 产品推荐
+                    $(function () {
+                        $('.he_c03p3gc').slick({
+                            infinite: true,
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            responsive: [{
+                                    breakpoint: 769,
+                                    settings: {
+                                        slidesToShow: 2,
+                                    }
+                                },
+                                {
+                                    breakpoint: 480,
+                                    settings: {
+                                        slidesToShow: 1,
+                                    }
+                                }
+                            ]
+                        })
+                    })
+                    var test = (window.location.href).split('?tp');
+                    if (!isNaN(test[1])) {
+            
+                        $("html,body").animate({
+                            scrollTop: $('.he_d1bxli[data-num="' + test[1] + '"]').offset().top - 100
+                        }, 700);
+            
+                        }
+        </script>
+
+
+        {eyou:include file="bottom.htm" /}
+    </body>
+</html>

@@ -1,0 +1,207 @@
+{include file="header.htm" /}
+<script type="text/javascript" src="__PUBLIC__/plugins/laydate/laydate.js"></script>
+<style>
+    .my-table table
+    {
+        border-collapse: collapse;
+        text-align: center;
+    }
+    .my-table table td, .my-table table th
+    {
+        border: 1px solid #cad9ea;
+        color: #666;
+        height: 30px;
+    }
+    .my-table table thead th
+    {
+        background-color: #CCE8EB;
+        width: 200px;
+        text-align: center;
+    }
+    .my-table table tr:nth-child(odd)
+    {
+        background: #fff;
+    }
+    .my-table table tr:nth-child(even)
+    {
+        background: #F5FAFA;
+    }
+</style>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="bar.htm" /}
+    <form class="form-horizontal" id="post_form" action="{:weapp_url('Export/Export/importOut')}" method="post" enctype="multipart/form-data">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="typeid"><em>*</em>选择模型</label>
+                </dt>
+                <dd class="opt">
+                    <select name="channel_id" id="channel_id">
+                        {volist name="channels" id="v"}
+                        <option value="{$v.id}">{$v.title}</option>
+                        {/volist}
+                    </select>
+                    <span class="err"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="typeid"><em>*</em>选择栏目</label>
+                </dt>
+                <dd class="opt">
+                    <select name="typeid" id="typeid">
+                        <option value="0">选择全部栏目…</option>
+                        {$arctype_html}
+                    </select>
+                    <span class="err"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row hide" id="is_attr">
+                <dt class="tit">
+                    <label>导出产品参数</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="at_1" class="cb-enable">是</label>
+                        <label for="at_0" class="cb-disable selected">否</label>
+                        <input id="at_1" name="is_attr" value="1" type="radio">
+                        <input id="at_0" name="is_attr" value="0" type="radio" checked="checked">
+                    </div>
+                </dd>
+            </dl>
+            <dl class="row hide pro_attr">
+                <dt class="tit">
+                    <label for="typeid">商品参数</label>
+                </dt>
+                <dd class="opt">
+                    <select name="list_id" id="list_id">
+                        <option value="">请选择</option>
+                    </select>
+                    <span class="err"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label for="typeid">发布起止时间</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" size="30" name="start_time" autocomplete="false" id="start_time" value="" class="qsbox" placeholder="开始时间" style="padding-right: 5px;width: 80px;">
+                    -
+                    <input type="text" size="30" name="end_time" autocomplete="false" id="end_time" value="" class="qsbox" placeholder="结束时间" style="padding-right: 5px;width: 80px;">
+
+                    <span class="err"></span>
+                    <p class="notic">默认不选，则代表全部时间</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="typeid">导出字段</label>
+                </dt>
+                <dd class="opt">
+                    {volist name="fields" key="key" id="v"}
+                    <?php if($v=='aid') $key='文章ID';?>
+                    <span style="padding: 0 5px;"><input type="checkbox" name="fields[]" checked value="{$key}">{$key}</span>
+                    {/volist}
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label for="typeid">每次导出数量</label>
+                </dt>
+                <dd class="opt">
+                    <input type="text" class="input" name="limit_num" value="10000">
+                    <p><span style="color: #F00;">默认即可</span>，建议使用1万条，数值太大会出现内存不足卡死的情况，改小不影响（如果出现卡死，可尝试改小）</p>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="tit">
+                    <label>过滤内容标签</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="zd_1" class="cb-enable selected">是</label>
+                        <label for="zd_0" class="cb-disable">否</label>
+                        <input id="zd_1" name="filter" value="1" type="radio" checked="checked">
+                        <input id="zd_0" name="filter" value="0" type="radio">
+                    </div>
+                </dd>
+            </dl>
+            <div class="bot">
+                <a href="JavaScript:void(0);" onclick="checkForm();" class="ncap-btn-big ncap-btn-green" id="submitBtn">导出</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__WEAPP_TEMPLATE__/skin/js/jquery.validate.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        //$('#end_time').layDate();
+        var start = {
+            elem: '#start_time',
+            format: 'YYYY-MM-DD',
+            istime: false,
+            istoday: false,
+        };
+        var end = {
+            elem: '#end_time',
+            format: 'YYYY-MM-DD',
+            istime: false,
+            istoday: false,
+        };
+        laydate(start);
+        laydate(end);
+
+        $("#post_form").validate({
+            ignore: ":hidden:not(select)",//解决无法校验select
+            rules: {
+                'file_stu':"required",
+            },
+            messages: {
+                'file_stu':"文件不能为空",
+            }
+        });
+    });
+    // 判断输入框是否为空
+    function checkForm(){
+        if($("#post_form").valid()){
+            layer_loading('正在处理');
+            $('#post_form').submit();
+        }
+    }
+    $("#channel_id").change(function () {
+        var channel=$(this).val();
+        $.ajax({
+            type: "POST",
+            url: "{:weapp_url('Export/Export/get_arctype_html')}",
+            data: {channel:channel},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $('#typeid').html('<option value="0">选择全部栏目…</option>'+data.data.html);
+                if(channel==2){
+                    $("#is_attr").show();
+                    if(data.data.attr_str){
+                        $(".pro_attr").show();
+                        $("#list_id").html(data.data.attr_str);
+                    }
+                }else{
+                    $("#is_attr").hide();
+                    $(".pro_attr").hide();
+                }
+            },
+            error:function(){
+            }
+        });
+    });
+
+</script>
+{include file="footer.htm" /}

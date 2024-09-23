@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+s:929:"/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/3d/9f016e24474cd61ebf7d370911841d.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/be/667c97cf55a9c6c94f6523a985e1dc.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/29/59899ec3be9b7c2e64a74988a33c6b.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/2d/4fdb83f639bb19ff9c2d7abb0479e8.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/19/a7dbcba87e00642e1c45bb23030042.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/f7/cf13dff03e651a4fc36cbbb79d2c82.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/77/7f17861fd289b9df6c675f67847ceb.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/7c/8e150c9ebcb977e263fac1f83ced60.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/a7/e60a74ff00cef19a7064f003acaf77.php,/www/wwwroot/testweb.aforenergy.com/data/runtime/cache/d0/ff1cc8da9bfd550cbbf080724b4eec.php";

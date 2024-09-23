@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="format-detection" content="telephone=no, email=no" />
+        <meta name="renderer" content="webkit" />
+        <title>{$eyou.field.seo_title}-{eyou:global name='web_name' /}</title>
+        <meta name="description" content="{$eyou.field.seo_description}" />
+        <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+
+        {eyou:static file='skin/css/iframe.css' /}
+        <!-- public start -->
+
+        {eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /}
+        {eyou:static file='skin/css/slick.css' /}
+
+        {eyou:static file='skin/css/slick-theme.css' /}
+
+        {eyou:static file='skin/css/animate.min.css' /}
+
+        {eyou:static file='skin/css/base-v1.4.css' /}
+
+        {eyou:static file='skin/css/jquery.mCustomScrollbar.min.css' /}
+
+        {eyou:static file='skin/css/animate.min.css' /}
+
+        {eyou:static file='skin/css/iconfont.css' /}
+
+        {eyou:static file='skin/css/main.css' /}
+
+        {eyou:static file='skin/css/media.css' /}
+
+        {eyou:static file='skin/css/he_base.css' /}
+
+        {eyou:static file='skin/css/swiper.min.css' /}
+    </head>
+ <body>
+
+
+    <div class="he_nyym he_d1ym he_dxlym">
+
+
+      {eyou:include file="head.htm" /}
+
+
+
+
+
+            <!-- 内页banner -->
+              <div class="he_banbx he_banbx1">
+                <div class="he_banli">
+                     <div class="he_banig">
+                    <img src="{$eyou.field.typelitpic}" class="he_banpc" alt="">
+                    <img src="{$eyou.field.typelitpic}" class="he_banph" alt="">
+                </div>
+                    <!-- banner文字 -->
+                    <div class="he_bante">
+                        <div class="he_conten1">
+                            <div class="he_bantnv">
+                                <div class="he_bantti1">
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="he_basuo">
+                                <div class="he_bashj">
+                                    <div class="he_syp4in">
+                                        <div class="he_syp4inp">
+                                            <input type="text" placeholder="Search key" name="keys" value="">
+                                        </div>
+                                        <div class="he_syp4inbt clearfix keywords">
+                                            <img src="{eyou:global name='web_templets_pc' /}/skin/img/suod1.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主体内容 -->
+            <div class="he_main">
+                <div class="he_dxlnyq">
+                    <!--面包屑-->
+                     <div class="he_bordkm">
+     <div class="s_cont1360">
+      <div class="he_bordul clearfix">
+       <div class="he_bordfr fl">
+        <a href="/"> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg" alt="" class="he_int1" /> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg" alt="" class="he_int2" /> </a>
+       </div>
+       <div class="he_bordli fl">
+         &gt;
+        {eyou:position style=' '/}
+
+       </div>
+
+      </div>
+     </div>
+    </div>
+
+
+                    <div class="he_quline">
+                        <div class="s_qhbox">
+
+                            {eyou:models type="sonself" id="field1" currentstyle="active"}
+                            <div class="s_qhnr act">
+                                <a href="{'#' + field1.id}">
+                                  {$field1.typename}
+                                </a>
+                            </div>
+                           {/eyou:models}
+
+                        </div>
+                    </div>
+                    <div class="he_d1ylz">
+                        <!-- 检索条件 -->
+                        <div class="he_d1yp1">
+                            <div class="he_d1yp1ec">
+                                <div class="he_d1ypjc1 he_d1p2">
+                                    <div class="he_d1p1ti wow g_fadeup1">
+                                        <p>
+                                            According to the product
+</p>
+                                    </div>
+                                    <div class="he_d1p1ny wow g_fadeup1">
+                                        <div class="he_d1p1nkc">
+                                            <div class="he_d1p1nli he_d1p1nli1 clearfix">
+                                                <div class="he_d1p1nle fl">
+                                                    <p>
+                                                        Type
+                                                    </p>
+                                                </div>
+                                                <div class="he_d1p1nri fl">
+                                                    <div class="he_d1p1nol clearfix">
+
+
+                                                      {eyou:models type="sonself" id="field1" currentstyle="active"}
+
+                                                        <div class="he_d1p1njx he_d1p1si fl clearfix get_type" data-id="40" data-type="one">
+                                                            <div class="he_d1p1cjx fl">
+                                                                <img src="{eyou:global name='web_templets_pc' /}/skin/img/duihao.svg" alt="" class="he_img">
+                                                                <img src="{eyou:global name='web_templets_pc' /}/skin/img/jiahao.svg" alt="" class="he_img1">
+                                                            </div>
+                                                            <div class="he_d1p1cwx fr">
+                                                                <p>
+                                                                    <a href="{$field.typeurl}" >
+                                                                   {$field1.typename}</a>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                     {/eyou:models}
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="he_d1p1nig">
+                                            <img src="{eyou:global name='web_templets_pc' /}/skin/img/jiantoux.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- 检索内容 -->
+                        <div class="he_d1yp2 he_d1bxli" data-num="1">
+                           <!--  <div class="he_d1yp2ti wow g_fadeup1">
+                                <p>
+                                    Search Result（ ）
+                                </p>
+                            </div> -->
+                            <div class="he_d1yp2ul">
+                                <div class="he_d1yp2tou clearfix wow g_fadeup1">
+                                    <div class="he_d1yp2tz he_d1yp2t1 fl">
+                                        <p>
+                                            File Name
+                                        </p>
+                                    </div>
+                                    <div class="he_d1yp2tz he_d1yp2t2 fl">
+                                        <p>
+                                            Product type
+                                        </p>
+                                    </div>
+                                    <!--<div class="he_d1yp2tz he_d1yp2t3 fl">-->
+                                    <!--<p>文件类型</p>-->
+                                    <!--</div>-->
+                                    <!--<div class="he_d1yp2tz he_d1yp2t4 fl">-->
+                                    <!--<p>语言</p>-->
+                                    <!--</div>-->
+                                </div>
+                                <div class="he_d1yp2bod">
+
+
+
+
+
+                                    {eyou:list loop='10' titlelen='30' infolen='160' orderby='add_time'}
+                                    <div class="he_d1yp2bl clearfix wow g_fadeup1">
+                                        <div class="he_d1yp2tz he_d1yp2t1 fl">
+                                            <p>
+                                              {$field.title}
+                                            </p>
+                                        </div>
+                                        <div class="he_d1yp2tz he_d1yp2t2 fl">
+                                            <p>
+                                            {$field.title}
+                                            </p>
+                                        </div>
+
+                                        <div class="he_d1yp2tz he_d1yp2t5 fl">
+
+
+                                            <a href="{eyou:field aid='$field.aid' addfields='xiazaifujian' /}" target="_blank">
+                                                Preview
+                                            </a>
+
+
+                                            <a href="{eyou:field aid='$field.aid' addfields='xiazaifujian' /}" target="_blank">
+                                                Download
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {/eyou:list}
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                </div>
+                               <!--  <div class="he_d1p3any wow g_fadeup1 getList">
+                                    <div class="he_syp2mob">
+                                        <a href="javascript:;" class="nomore">
+                                            加载更多
+                                        </a>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            {eyou:include file="bottom.htm" /}
+
+
+
+        <!-- public end -->
+        <script>
+            new WOW().init();
+        </script>
+        <script>
+            $('.get_type').click(function() {
+        var that = $(this);
+        var id = that.attr('data-id');
+        var html = '';
+
+        var index = layer.load(1, {
+            shade: [0.1, '#fff'] //0.1透明度的白色背景
+        });
+        $.ajax({
+            url: "/Cn/Index/getType.html",
+            data: {
+                id: id
+            },
+            dataType: "json",
+            type: "POST",
+            success: function(data) {
+                layer.close(index)
+                console.log(data)
+                if (data.status == 'success') {
+                    if (data.info.length > 0) {
+                        for (let i = 0; i < data.info.length; i++) {
+
+                            if (id == 0) {
+                                html += '<div class="he_d1p1njx he_d1p1si fl clearfix act" data-id="' + data.info[i].id + '" id="two' + data.info[i].id + '" data-type="two">';
+                            } else {
+                                html += '<div class="he_d1p1njx he_d1p1si fl clearfix" data-id="' + data.info[i].id + '" id="two' + data.info[i].id + '" data-type="two">';
+
+                            }
+                            html += '<div class="he_d1p1cjx fl">';
+                            html += '<img src="/Public/Cn/images/duihao.svg" alt="" class="he_img">';
+                            html += '<img src="/Public/Cn/images/jiahao.svg" alt="" class="he_img1">';
+                            html += '</div>';
+                            html += '<div class="he_d1p1cwx fr">';
+                            html += '<p>' + data.info[i].title + '</p>';
+                            html += '</div>';
+                            html += '</div>';
+                        }
+                        if (that.hasClass("act")) {
+                            $('.he_d1p1niol').append(html)
+                        } else {
+                            var type_two = []
+                            $('.he_d1p1njx').each(function(i, v) {
+
+                                if ($(this).attr('data-type') == 'two' && $(this).attr('data-id') != 0) {
+                                    type_two.push($(this).attr('data-id'));
+                                }
+
+                            })
+                            for (let i = 0; i < type_two.length; i++) {
+                                for (let j = 0; j < data.info.length; j++) {
+                                    if (type_two[i] == data.info[j].id) {
+                                        $('#two' + type_two[i]).remove();
+                                    }
+                                }
+                            }
+                            console.log(type_two);
+
+                        }
+
+                    } else {
+
+                    }
+
+                } else {
+                    layer.msg(data.info);
+                }
+            },
+            error: function(data) {}
+        });
+
+    })
+    // $(function(){
+    //     $('.he_d1ypjc1').find('.he_d1p1nli1').find('.he_d1p1si').click(function(){
+    //         var shu = $(this).index() - 1;
+    //         $('.he_d1ypjc1').find('.he_d1p1nli2').find('.he_d1p1niol').eq(shu).stop().fadeIn().siblings().hide();
+    //         if($(this).hasClass('act')){
+    //             $('.he_d1ypjc1').find('.he_d1p1nli2').find('.he_d1p1niol').eq(shu).children().removeClass('act');
+    //             $('.he_d1ypjc1').find('.he_d1p1nli2').stop().fadeOut();
+    //         }else{
+    //             $('.he_d1ypjc1').find('.he_d1p1nli2').stop().fadeIn();
+    //         }
+    //     })
+    // })
+
+$(function() {
+
+    var swich = true;
+    // 选择全部
+    $("body").on("click", ".he_d1p1all", function() {
+        if (swich) {
+            swich = false;
+            $(this).siblings().addClass('act');
+            $(this).addClass('act');
+        } else {
+            swich = true;
+            $(this).siblings().removeClass('act');
+            $(this).removeClass('act');
+        }
+    })
+
+    $("body").on("click", ".he_d1p1si", function() {
+        var all = true;
+        $(this).toggleClass('act');
+        $(this).parents('.he_d1p1nol,.he_d1p1niol').find('.he_d1p1si').each(function(index, item) {
+            if ($(item).hasClass("act") == false) {
+                console.log(item)
+                all = false;
+                return false;
+            };
+        });
+
+        if (all) {
+            console.log(this)
+            $(this).parents('.he_d1p1nol,.he_d1p1niol').find('.he_d1p1all').addClass('act');
+        } else {
+            $(this).parents('.he_d1p1nol,.he_d1p1niol').find('.he_d1p1all').removeClass('act');
+        }
+    })
+
+
+    $('.he_d1p1nig').click(function() {
+        $(this).parents('.he_d1p2').toggleClass('on1');
+    })
+
+    $('.he_d1p1njx').click(function() {
+        $(this).parents('.he_d1p2').removeClass('on1');
+    })
+
+    $('.he_d1p2').each(function(index, item) {
+        if ($(this).find('.he_d1p1ny').height() > 70) {
+            $(this).addClass('on');
+            $(this).addClass('on1');
+        }
+    });
+
+    $('.keywords').click(function() {
+        var keys = $("input[name='keys']").val();
+        var html = '';
+        page = 0
+        var type = "";
+        var type_two = "";
+        var type_three = "";
+        var type_four = "";
+        var type_five = "";
+
+        $('.he_d1p1njx').each(function(i, v) {
+                if ($(this).attr('data-type') == 'one' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type += $(this).attr('data-id') + ",";
+                }
+                if ($(this).attr('data-type') == 'two' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_two += $(this).attr('data-id') + ",";
+                }
+                if ($(this).attr('data-type') == 'three' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_three += $(this).attr('data-id') + ",";
+                }
+                if ($(this).attr('data-type') == 'four' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_four += $(this).attr('data-id') + ",";
+
+                }
+                if ($(this).attr('data-type') == 'five' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_five += $(this).attr('data-id') + ",";
+                }
+            })
+            // if($('.threes').hasClass('act')){
+            //     type_three = ""
+            // }
+        var index = layer.load(1, {
+            shade: [0.1, '#fff'] //0.1透明度的白色背景
+        });
+        $.ajax({
+            url: "/Cn/Index/getDownloads.html",
+            data: {
+                keys: keys,
+                type: type,
+                type_two: type_two,
+                type_three: type_three,
+                type_four: type_four,
+                type_five: type_five,
+                page: page
+            },
+            dataType: "json",
+            type: "POST",
+            success: function(data) {
+                layer.close(index)
+                console.log(data)
+                if (data.status == 'success') {
+                    if (data.info.list.length > 0) {
+                        for (let i = 0; i < data.info.list.length; i++) {
+
+
+
+
+
+                            html += '<div class="he_d1yp2bl clearfix wow g_fadeup1">';
+                            html += '<div class="he_d1yp2tz he_d1yp2t1 fl">';
+                            html += '<p>' + data.info.list[i].title + '</p>';
+                            html += '</div>';
+                            html += '<div class="he_d1yp2tz he_d1yp2t2 fl">';
+                            html += '<p>' + data.info.list[i].type + '</p>';
+                            html += '</div>';
+                            // html+= '<div class="he_d1yp2tz he_d1yp2t3 fl">';
+                            // html+= '<p>'+data.info.list[i].type_three+'</p>';
+                            // html+= '</div>';
+                            // html+= '<div class="he_d1yp2tz he_d1yp2t4 fl">';
+                            // html+= '<p>'+data.info.list[i].type_four+'</p>';
+                            // html+= '</div>';
+                            html += '<div class="he_d1yp2tz he_d1yp2t5 fl">';
+                            if (data.info.list[i].show == 1) {
+                                html += '<a href="/Cn/Skippower/downloadFileF?id=' + data.info.list[i].id + '&mid=60" target="_blank">预览</a>';
+                            }
+                            html += '<a href="/Cn/Skippower/downloadFile?id=' + data.info.list[i].id + '&mid=60" target="_blank">下载</a>';
+                            html += '</div>';
+                            html += '</div>';
+
+                        }
+                        page = 1
+                        $('.nomore').text('加载更多');
+                        $('.he_d1yp2bod').empty()
+                        $('.he_d1yp2bod').append(html)
+                        $('.he_d1yp2ti p').text('搜索结果（' + data.info.count + '）')
+
+                    } else {
+                        $('.nomore').text('没有更多！');
+                        $('.he_d1yp2bod').empty()
+                        $('.he_d1yp2ti p').text('搜索结果（0）')
+                    }
+                    $("html,body").animate({
+
+                        scrollTop: $('.he_d1bxli[data-num="1"]').offset().top - 100
+
+                    }, 700);
+                } else {
+                    layer.msg(data.info);
+                }
+            },
+            error: function(data) {}
+        });
+
+    })
+    var page = 1;
+    $('.getList').click(function(e) {
+        var keys = $("input[name='keys']").val();
+        var html = '';
+        var type = "";
+        var type_two = "";
+        var type_three = "";
+        var type_four = "";
+        var type_five = "";
+
+        $('.he_d1p1njx').each(function(i, v) {
+                if ($(this).attr('data-type') == 'one' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type += $(this).attr('data-id') + ",";
+                }
+                if ($(this).attr('data-type') == 'two' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_two += $(this).attr('data-id') + ",";
+                }
+                if ($(this).attr('data-type') == 'three' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_three += $(this).attr('data-id') + ",";
+                }
+                if ($(this).attr('data-type') == 'four' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_four += $(this).attr('data-id') + ",";
+
+                }
+                if ($(this).attr('data-type') == 'five' && $(this).hasClass('act') === true && $(this).attr('data-id') != 0) {
+                    type_five += $(this).attr('data-id') + ",";
+                }
+            })
+            // if($('.threes').hasClass('act')){
+            //     type_three = ""
+            // }
+        var index = layer.load(1, {
+            shade: [0.1, '#fff'] //0.1透明度的白色背景
+        });
+        $.ajax({
+            url: "/Cn/Index/getDownloads.html",
+            data: {
+                keys: keys,
+                type: type,
+                type_two: type_two,
+                type_three: type_three,
+                type_four: type_four,
+                type_five: type_five,
+                page: page
+            },
+            dataType: "json",
+            type: "POST",
+            success: function(data) {
+                layer.close(index)
+                console.log(data)
+                if (data.status == 'success') {
+                    if (data.info.list.length > 0) {
+                        for (let i = 0; i < data.info.list.length; i++) {
+
+                            html += '<div class="he_d1yp2bl clearfix wow g_fadeup1">';
+                            html += '<div class="he_d1yp2tz he_d1yp2t1 fl">';
+                            html += '<p>' + data.info.list[i].title + '</p>';
+                            html += '</div>';
+                            html += '<div class="he_d1yp2tz he_d1yp2t2 fl">';
+                            html += '<p>' + data.info.list[i].type + '</p>';
+                            html += '</div>';
+                            // html+= '<div class="he_d1yp2tz he_d1yp2t3 fl">';
+                            // html+= '<p>'+data.info.list[i].type_three+'</p>';
+                            // html+= '</div>';
+                            // html+= '<div class="he_d1yp2tz he_d1yp2t4 fl">';
+                            // html+= '<p>'+data.info.list[i].type_four+'</p>';
+                            // html+= '</div>';
+                            html += '<div class="he_d1yp2tz he_d1yp2t5 fl">';
+                            if (data.info.list[i].show == 1) {
+                                html += '<a href="/Cn/Skippower/downloadFileF?id=' + data.info.list[i].id + '&mid=60" target="_blank">预览</a>';
+                            }
+                            html += '<a href="/Cn/Skippower/downloadFile?id=' + data.info.list[i].id + '&mid=60" target="_blank">下载</a>';
+                            html += '</div>';
+                            html += '</div>';
+
+                        }
+
+                        $('.he_d1yp2bod').append(html)
+                        page++
+                    } else {
+                        $('.nomore').text('没有更多！');
+                    }
+                } else {
+                    layer.msg(data.info);
+                }
+            },
+            error: function(data) {}
+        });
+    })
+    $('.get_all').click(function() {
+        $('.he_d1p1njx').each(function(i, v) {
+            if ($(this).attr('data-type') == 'four') {
+                $(this).removeClass('cannot');
+            }
+            if ($(this).attr('data-type') == 'five') {
+                $(this).removeClass('cannot');
+            }
+        })
+    })
+    $("body").on("click", ".get_all_type", function() {
+        if ($(this).hasClass('act')) {
+            $('.he_d1p1njx').each(function(i, v) {
+                if ($(this).attr('data-type') == 'two') {
+                    $(this).addClass('act');
+                }
+            })
+        } else {
+            $('.he_d1p1njx').each(function(i, v) {
+                if ($(this).attr('data-type') == 'two') {
+                    $(this).removeClass('act');
+                }
+            })
+        }
+
+    })
+    $('.get_country').click(function() {
+        if ($('.get_country').hasClass('act') && $('.get_language').hasClass('act')) {
+            $('.he_d1p1njx').each(function(i, v) {
+                if ($(this).attr('data-type') == 'four') {
+                    $(this).removeClass('cannot');
+                }
+                if ($(this).attr('data-type') == 'five') {
+                    $(this).removeClass('cannot');
+                }
+            })
+        } else {
+            if ($(this).hasClass('act')) {
+                $('.he_d1p1njx').each(function(i, v) {
+                    if ($(this).attr('data-type') == 'four') {
+                        $(this).addClass('cannot');
+                        $(this).removeClass('act');
+                    }
+                })
+            } else {
+                if ($('.get_language').hasClass('act')) {
+                    $('.he_d1p1njx').each(function(i, v) {
+                        if ($(this).attr('data-type') == 'five') {
+                            $(this).addClass('cannot');
+                            $(this).removeClass('act');
+                        }
+                    })
+                } else {
+                    $('.he_d1p1njx').each(function(i, v) {
+                        if ($(this).attr('data-type') == 'four') {
+                            $(this).removeClass('cannot');
+                            $(this).removeClass('act');
+                        }
+                    })
+                }
+
+            }
+        }
+
+
+    })
+    $('.get_language').click(function() {
+        if ($('.get_country').hasClass('act') && $('.get_language').hasClass('act')) {
+            $('.he_d1p1njx').each(function(i, v) {
+                if ($(this).attr('data-type') == 'four') {
+                    $(this).removeClass('cannot');
+                }
+                if ($(this).attr('data-type') == 'five') {
+                    $(this).removeClass('cannot');
+                }
+            })
+        } else {
+            if ($('.get_language').hasClass('act')) {
+                $('.he_d1p1njx').each(function(i, v) {
+                    if ($(this).attr('data-type') == 'five') {
+                        $(this).addClass('cannot');
+                        $(this).removeClass('act');
+                    }
+                })
+            } else {
+                if ($('.get_country').hasClass('act')) {
+                    $('.he_d1p1njx').each(function(i, v) {
+                        if ($(this).attr('data-type') == 'four') {
+                            $(this).addClass('cannot');
+                            $(this).removeClass('act');
+                        }
+                    })
+                } else {
+                    $('.he_d1p1njx').each(function(i, v) {
+                        if ($(this).attr('data-type') == 'five') {
+                            $(this).removeClass('cannot');
+                            $(this).removeClass('act');
+                        }
+                    })
+                }
+
+            }
+        }
+
+    })
+})
+        </script>
+        <script>
+            console.log('%c文件路径：./Cn/View/Lists/downloads', 'color:green')
+        </script>
+    </body>
+
+</html>

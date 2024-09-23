@@ -1,0 +1,343 @@
+<!--
+ * @Author: ZhouQishun
+ * @Date: 2023-12-26 06:33:29
+ * @LastEditTime: 2024-01-04 15:13:53
+ * @LastEditors: ZhouQishun
+ * @Description: 1.0.0
+ * @FilePath: \afceshixin.weibaoke.com.cn\template\pc\lists_warranty_a.htm
+ *
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit" />
+    <title>{$eyou.field.seo_title}-{eyou:global name='web_name' /}</title>
+    <meta name="description" content="{$eyou.field.seo_description}" />
+    <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+
+    {eyou:static file='skin/css/iframe.css' /}
+    <!-- public start -->
+
+    {eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /}
+    {eyou:static file='skin/css/slick.css' /}
+
+    {eyou:static file='skin/css/slick-theme.css' /}
+
+    {eyou:static file='skin/css/animate.min.css' /}
+
+    {eyou:static file='skin/css/base-v1.4.css' /}
+
+    {eyou:static file='skin/css/jquery.mCustomScrollbar.min.css' /}
+
+    {eyou:static file='skin/css/animate.min.css' /}
+
+    {eyou:static file='skin/css/iconfont.css' /}
+
+    {eyou:static file='skin/css/main.css' /}
+
+    {eyou:static file='skin/css/media.css' /}
+
+    {eyou:static file='skin/css/he_base.css' /}
+
+    {eyou:static file='skin/css/swiper.min.css' /}
+
+    {eyou:static file='skin/css/weui.min.css' /}
+</head>
+
+<style>
+    .weui-dialog__btn {
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .weui-dialog__btn.weui-dialog__btn_error {
+        color: #e50011;
+    }
+
+    .he_main .he_b1p4bjgk p {
+        text-align: left;
+    }
+</style>
+
+<body>
+    <!-- 头部文件 -->
+    {eyou:include file="head.htm" /}
+
+    <!-- 内页banner -->
+    <div class="he_banbx he_banbx1">
+        <div class="he_banli">
+            <div class="he_banig">
+                <img src="{$eyou.field.typelitpic}" class="he_banpc" alt="">
+                <img src="{$eyou.field.typelitpic}" class="he_banph" alt="">
+            </div>
+            <!-- banner文字 -->
+            <div class="he_bante">
+                <div class="he_conten1">
+                    <div class="he_bantnv">
+                        <div class="he_bantti1">
+                            <h1>
+                                <p>
+                                    {$eyou.field.englist_name}
+                                </p>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="he_main">
+        <div class="he_k5p1">
+            <!--面包屑-->
+            <div class="he_bordkm">
+                <div class="s_cont1360">
+                    <div class="he_bordul clearfix">
+                        <div class="he_bordfr fl">
+                            <!--   <a href="/"> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg" alt="" class="he_int1" /> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg" alt="" class="he_int2" /> </a>  -->
+                        </div>
+                        <!--  <div class="he_bordli fl">
+                            &gt; {$positions}
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="he_conten1">
+                <div class="he_k5p1bt clearfix">
+
+                    <div class="he_k5p1ri fl">
+                        <div class="he_k5p1ribn">
+                            <div class="he_k5p1ex">
+                                <div class="he_k5p1de clearfix">
+                                    <div class="he_k5p1dele fl">
+                                        <div class="he_k5p1din">
+                                            <div class="s_b2_2c1search s_xljj">
+                                                <input type="text" id="txtcode"
+                                                    placeholder=" Please enter the serial number to check " name="keys"
+                                                    value="">
+                                                <img src="{eyou:global name='web_templets_pc' /}/skin/img/b2_2icon1.png"
+                                                    alt="" class="keywords">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="he_k5p1deri fr sao-box">
+                                        <p>
+                                            Search
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="he_k5p1djg">
+                                <div class="he_k5p1dte">
+                                    <p>
+                                        <span class="search">
+                                        </span>
+                                        Search Result
+                                    </p>
+                                </div>
+                                <div class="he_k5p1dld">
+                                    <div class="he_k5p1dldli clearfix">
+                                        <div class="he_k5p1dsle fl">
+                                            <p>
+                                                SN
+                                            </p>
+                                        </div>
+                                        <div class="he_k5p1dsri fl one">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="he_k5p1dldli clearfix">
+                                        <div class="he_k5p1dsle fl">
+                                            <p>
+                                                Product Model
+                                            </p>
+                                        </div>
+                                        <div class="he_k5p1dsri fl two">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="he_k5p1dldli clearfix">
+                                        <div class="he_k5p1dsle fl">
+                                            <p>
+                                                Warranty Period (Year)
+                                            </p>
+                                        </div>
+                                        <div class="he_k5p1dsri fl three">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="he_k5p1dldli clearfix">
+                                        <div class="he_k5p1dsle fl">
+                                            <p>
+                                                End of Warranty (MM-DD-YYYY)
+                                            </p>
+                                        </div>
+                                        <div class="he_k5p1dsri fl three">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="he_k5p3">
+            <div class="he_k5p3ti">
+                <div class="he_k5p2ti">
+                    <h2 class="he_x40ft">
+                        Warranty Terms (Overseas)
+                        <p></p>
+                    </h2>
+                    <br>
+
+                    {eyou:if condition='($eyou.field.terms_filse)'}
+                    <h2 class="he_x40ft" style="font-size: 16px;color: #e50011;">Download</h2>
+                    {/eyou:if}
+                </div>
+                <div class="he_b1p4bjgk wow g_fadeup1" style="width: 100%;
+    position: relative;
+    margin-top: 64px;
+    padding: 0 80px;
+    padding-bottom: 70px;">
+
+                    {eyou:if condition="$eyou.field.terms"}
+                    <div class="">{$eyou.field.terms|htmlspecialchars_decode}</div>
+                    {eyou:else /}
+                    <div class="">{$eyou.field.total_terms|htmlspecialchars_decode}</div>
+                    {/eyou:if}
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- footer -->
+    {eyou:include file="bottom.htm" /}
+
+    <!-- public end -->
+    <script>
+        new WOW().init();
+    </script>
+
+
+</body>
+
+{eyou:static file='skin/js/weui.min.js' /}
+
+<script>
+    $('.sao-box').on('click', function () {
+        var $code = $("#txtcode");
+        if (trim($code.val()).length < 4 || trim($code.val()).length > 20) {
+            // console.log(weui);
+            weui.alert("No information!", {
+                buttons: [
+                    {
+                        label: "OK",
+                        type: "error",
+                    }
+                ]
+            });
+            $code.focus();
+        }
+        else {
+            // var url = "{:url('View/index','sn_code=c_code')}";
+            // url = url.replace("c_code", trim($code.val()));
+            //url= url.replace("c_rand",Math.random());
+            //console.log(url);
+            //return false;
+            // console.log(url);
+            // window.location = url;
+            getDate($code.val());
+        }
+    });
+
+    function trim(str) {
+        return str.replace(/[ ]/g, "");
+    }
+
+    function getDate(keywords) {
+        let myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        let $code = $("#txtcode");
+
+        let formdata = {
+            channelid: "{$eyou.field.channel}",
+            typeid: "{$eyou.field.typeid}",
+            apiList: `ekey=1&page=1&pagesize=99&keywords=${keywords}`
+        }
+
+        let loading = weui.loading('loading...')
+        let requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: JSON.stringify(formdata),
+            redirect: 'follow'
+        };
+
+        fetch("{:url('api/v1.Api/archivesList', '_ajax=1')}", requestOptions)
+            .then(response => response.json())
+            .then(result => {
+                loading.hide()
+                if (result.code === 1 && result.data) {
+                    if (result.data.apiList[1].total > 0 && result.data.apiList[1].data) {
+                        let item = result.data.apiList[1].data[0]
+                        let url = "{:url('View/index','aid=item_aid')}";
+                        url = url.replace("item_aid", item.aid);
+                        window.location = url
+                    } else {
+                        weui.alert("No information!", {
+                            buttons: [
+                                {
+                                    label: "OK",
+                                    type: "error",
+                                }
+                            ]
+                        });
+                        $code.focus();
+                    }
+                } else {
+                    weui.alert("Server Error!", {
+                        buttons: [
+                            {
+                                label: "OK",
+                                type: "error",
+                            }
+                        ]
+                    });
+                    $code.focus();
+                }
+            })
+            .catch(error => {
+                loading.hide()
+                console.error(error);
+                weui.alert("Server Error!", {
+                    buttons: [
+                        {
+                            label: "OK",
+                            type: "error",
+                        }
+                    ]
+                });
+                $code.focus();
+            });
+    }
+</script>
+
+</html>

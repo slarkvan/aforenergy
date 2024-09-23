@@ -1,0 +1,218 @@
+{include file="header.htm" /}
+<style>
+    .my-table table
+    {
+        border-collapse: collapse;
+        text-align: center;
+    }
+    .my-table table td, .my-table table th
+    {
+        border: 1px solid #cad9ea;
+        color: #666;
+        height: 30px;
+    }
+    .my-table table thead th
+    {
+        background-color: #CCE8EB;
+        width: 200px;
+        text-align: center;
+    }
+    .my-table table tr:nth-child(odd)
+    {
+        background: #fff;
+    }
+    .my-table table tr:nth-child(even)
+    {
+        background: #F5FAFA;
+    }
+
+</style>
+<body style="background-color: #FFF; overflow: auto;">
+<div id="toolTipLayer" style="position: absolute; z-index: 9999; display: none; visibility: visible; left: 95px; top: 573px;"></div>
+<div id="append_parent"></div>
+<div id="ajaxwaitid"></div>
+<div class="page">
+    {include file="bar.htm" /}
+    <form class="form-horizontal" id="post_form" action="{:weapp_url('Export/Export/import')}" method="post" enctype="multipart/form-data">
+        <div class="ncap-form-default">
+            <dl class="row">
+                <dt class="tit">
+                    <label for="typeid"><em>*</em>导入栏目</label>
+                </dt>
+                <dd class="opt">
+                    <select name="typeid" id="typeid">
+                        <option value="">请选择栏目…</option>
+                        {$arctype_html}
+                    </select>
+                    <span class="err"></span>
+                    <p class="notic"></p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>栏目说明</label>
+                </dt>
+                <dd class="opt my-table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>
+                                栏目名称
+                            </th>
+                            <th>
+                                栏目ID
+                            </th>
+                        </tr>
+                        </thead>
+                        <tbody id="content"></tbody>
+
+                    </table>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>导入自定义字段</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="zd_1" class="cb-enable">是</label>
+                        <label for="zd_0" class="cb-disable selected">否</label>
+                        <input id="zd_1" name="zdy" value="1" type="radio">
+                        <input id="zd_0" name="zdy" value="0" type="radio" checked="checked">
+                    </div>
+                    <p style="clear: both;">说明：自定义字段包括模型的自定义字段和 产品的 产品参数字段，开启自定义必须要选择栏目
+                    </p>
+                </dd>
+            </dl>
+            <dl class="row hide pro_attr">
+                <dt class="tit">
+                    <label>商品参数</label>
+                </dt>
+                <dd class="opt">
+                    <select name="list_id" id="list_id">
+                        <option value="">请选择</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>设置文章ID</label>
+                </dt>
+                <dd class="opt">
+                    <div class="onoff">
+                        <label for="a_1" class="cb-enable">是</label>
+                        <label for="a_0" class="cb-disable selected">否</label>
+                        <input id="a_1" name="if_id" value="1" type="radio">
+                        <input id="a_0" name="if_id" value="0" type="radio" checked="checked">
+                    </div>
+                    <p style="clear: both;">
+                        不建议开启，除非特殊需要导入的id要求不变！<br/>
+                        自己定义文章/产品的id值，如果自定义的id值系统已存在，会删除原有文章后进行新增操作，不开启此功能id会自动增加
+                    </p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>下载模板</label>
+                </dt>
+                <dd class="opt">
+                    <a href="javascript:void(0);" id="muban">excel模板文件</a>
+                    <p>说明:从第二行开始录入数据，第一行不可删除和修改</p>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="tit">
+                    <label>导入Excel表</label>
+                </dt>
+                <dd class="opt">
+                    <input  type="file" name="file_stu" />
+                </dd>
+            </dl>
+            <div class="bot">
+                <a href="JavaScript:void(0);" onclick="checkForm();" class="ncap-btn-big ncap-btn-green" id="submitBtn">确认提交</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="__WEAPP_TEMPLATE__/skin/js/jquery.validate.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $("#post_form").validate({
+            ignore: ":hidden:not(select)",//解决无法校验select
+            rules: {
+                'file_stu':"required",
+                'typeid':"required",
+            },
+            messages: {
+                'file_stu':"文件不能为空",
+                'typeid':"请选择一个小类或者大类",
+            }
+        });
+    });
+    // 判断输入框是否为空
+    function checkForm(){
+        if($("#post_form").valid()){
+            layer_loading('正在处理');
+            $('#post_form').submit();
+        }
+    }
+    $("#typeid").click(function () {
+        getTypes($(this).val());
+    });
+    getTypes(0);
+    function getTypes(typeid){
+        $.ajax({
+            type: "POST",
+            url: "{:weapp_url('Export/Export/getType')}",
+            data: {typeid:typeid},
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                $('#content').html(data.data.html);
+                if(data.data.channel==2){
+                    if(data.data.attr){
+                        $('.pro_attr').show();
+                        $("#list_id").html(data.data.attr);
+                    }else{
+                        $('.pro_attr').hide();
+                        $("#list_id").html('<option value="">请选择</option>');
+                    }
+
+                }else{
+                    $('.pro_attr').hide();
+                    $("#list_id").html('<option value="">请选择</option>');
+                }
+            },
+            error:function(){
+
+            }
+        });
+    }
+    $("#muban").click(function () {
+        var typeid=$("#typeid").val();
+        var zdy=$('input:radio[name="zdy"]:checked').val();
+        var if_id=$('input:radio[name="if_id"]:checked').val();
+        var list_id=$('#list_id').val();
+        if(zdy==1 && typeid==0){
+            layer.msg('请选择栏目');
+            return false;
+        }
+        $.ajax({
+            type: "POST",//方法类型
+            dataType: "json",//预期服务器返回的数据类型
+            url: "{:weapp_url('Export/getMuban')}",//url
+            data:{typeid:typeid,zdy:zdy,if_id:if_id,list_id:list_id},
+            success: function (result) {
+                console.log(result.data);
+                if(result.code==1){
+                    window.location.href=result.data.file_name;
+                }else{
+                    layer.msg('模板下载失败！');
+                }
+            },error : function(error) {
+                layer.msg('模板下载失败！');
+            }
+        });
+    });
+</script>
+{include file="footer.htm" /}

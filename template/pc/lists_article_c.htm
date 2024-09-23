@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit" />
+    <title>{$eyou.field.seo_title}-{eyou:global name='web_name' /}</title>
+    <meta name="description" content="{$eyou.field.seo_description}" />
+    <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+
+    {eyou:static file='skin/css/iframe.css' /}
+    <!-- public start -->
+
+    {eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /} {eyou:static file='skin/css/slick.css'
+    /} {eyou:static file='skin/css/slick-theme.css' /} {eyou:static file='skin/css/animate.min.css'
+    /} {eyou:static file='skin/css/base-v1.4.css' /} {eyou:static
+    file='skin/css/jquery.mCustomScrollbar.min.css' /} {eyou:static file='skin/css/animate.min.css'
+    /} {eyou:static file='skin/css/iconfont.css' /} {eyou:static file='skin/css/main.css' /}
+    {eyou:static file='skin/css/media.css' /} {eyou:static file='skin/css/he_base.css' /}
+    {eyou:static file='skin/css/swiper.min.css' /}
+    <style>
+        .s_b2_3c2list p{
+          padding-top: 10px;
+          color: #333;
+          font-size: 16px;
+          font-weight: 400;
+          
+            
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 头部文件 -->
+    {eyou:include file="head.htm" /}
+    <!-- 内页banner -->
+    <div class="he_banbx he_banbx1">
+      <div class="he_banli">
+        <div class="he_banig">
+          <img src="{$eyou.field.typelitpic}" class="he_banpc" alt="" />
+          <img src="{$eyou.field.typelitpic}" class="he_banph" alt="" />
+        </div>
+        <!-- banner文字 -->
+        <div class="he_bante">
+          <div class="he_conten1">
+            <div class="he_bantnv">
+              <div class="he_bantti1">
+                <h1>
+                  {$eyou.field.typename}
+                  <p></p>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 主体内容 -->
+    <div class="he_main">
+      <div class="s_content s_b2content">
+        <!--面包屑-->
+
+        <div class="he_bordkm">
+          <div class="s_cont1360">
+            <div class="he_bordul clearfix">
+              <div class="he_bordfr fl">
+                <a href="/">
+                  <img
+                    src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg"
+                    alt=""
+                    class="he_int1"
+                  />
+                  <img
+                    src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg"
+                    alt=""
+                    class="he_int2"
+                  />
+                </a>
+              </div>
+              <div class="he_bordli fl">&gt; {eyou:position style=' '/}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="s_b2cont s_cont1514">
+          <div class="he_quline">
+            <div class="s_qhbox">
+              {eyou:models type="first" id="field1" currentstyle="active"}
+              <div
+                class="s_qhnr {$eyou.field.id == $field1.id? 'act' : ''}"
+                data-id="{$field1.id}"
+                data-type="one"
+              >
+                <a href="{$field1.typeurl}">{$field1.typename}</a>
+              </div>
+              {/eyou:models}
+            </div>
+          </div>
+
+          <div class="s_b2cont3 clearfix">
+            {eyou:artlist loop="21" typeid="$field.id" }
+
+            <div class="s_b2_3c2list fl wow g_fadeup1">
+              <a href="{$field.arcurl}">
+                <div class="s_b2_3c2li">
+                  <!--<div class="s_b2_3c2litop">-->
+                  <!---->
+                  <!--<span># </span>-->
+                  <!---->
+                  <!--</div>-->
+                  <div class="s_b2c3ig">
+                    <img
+                      src="{eyou:global name='web_templets_pc' /}/skin/img/b2_img00.png"
+                      alt=""
+                      class="s_b2c3ig1"
+                    />
+                    <img src="{$field.litpic}" class="s_b2c3ig2" />
+                  </div>
+                 
+                  
+                  <p>{$field.title}</p>
+                  <p>{eyou:field aid='$field.aid' addfields='selticof' /}</p>
+                  <p>{eyou:field aid='$field.aid' addfields='Battery1' /}</p>
+                  <div class="s_b2_3c2libot clearfix" style="padding-top: 15px;">
+                    <div class="s_b2_3libotl fl p16">MORE</div>
+                    <div class="s_b2_2c2wztop fr p16">
+                      <p>{$field.add_time|MyDate='Y-m-d',###}</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {/eyou:artlist}
+          </div>
+
+          <div class="s_b2cont4">
+            <div class="mc_fybox wow g_fadeup1">
+              <!-- pc分页临时隐藏 -->
+              <!--  <div class="mc_pcfy">
+        <ul class="pc_fenye clearfix">
+
+
+         <li class="comp-tabli activepage"> {$pages}</li>
+         <a class="comp-tabli" href="/news-exhibition/news_2"><li>2</li></a>
+
+        </ul>
+       </div>  -->
+              <!-- ph分页 -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+
+    {eyou:include file="bottom.htm" /}
+
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      $('.s_b2cont1').slick({
+        dots: true, //是否显示轮播点
+        slidesToShow: 1, //每屏展示的个数
+        slidesToScroll: 1, //每次滚动的个数
+        // autoplay: true,
+        adaptiveHeight: true,
+      });
+
+      //下拉选择
+      $(function () {
+        // $(".s_b2c2xlbotnr").each(function () {
+        //     $(this).attr("data-value", $(this).text());
+        // });
+        $('.s_b2c2xltop').click(function (e) {
+          e.stopPropagation();
+          $(this).siblings('.s_b2c2xlbot').slideToggle();
+          $(this).parents().siblings().find('.s_b2c2xlbot').slideUp();
+          $(this).toggleClass('on');
+          $(this).parents('.s_b2c2xl').siblings().find('.s_b2c2xltop').removeClass('on');
+        });
+        $('.s_b2c2xlbotnr').click(function () {
+          var selectShow = $(this).text();
+          var realVal = $(this).attr('data-value');
+          console.log(selectShow, realVal);
+          $(this).parents().find('.s_b2c2xlbot').slideUp();
+          $(this).parents('.s_b2c2xl').find('.s_b2c2xltop').find('.s_select_show2').val(selectShow);
+          $(this)
+            .parents('.s_b2c2xl')
+            .find('.s_b2c2xltop')
+            .find('.s_select_real2')
+            .val(realVal)
+            .trigger('change');
+          $('.s_b2c2xltop').removeClass('on');
+          var keys = $("input[name='keys']").val();
+          var type_id = $("input[name='type']").val();
+          var type_two_id = $("input[name='type_two']").val();
+          var tags = $("input[name='tags']").val();
+
+          var str = '?';
+          if (keys) {
+            str += '&keys=' + keys;
+          }
+          if (type_id) {
+            str += '&type_id=' + type_id;
+          }
+          if (type_two_id) {
+            str += '&type_two_id=' + type_two_id;
+          }
+          if (tags) {
+            str += '&tags=' + tags;
+          }
+          window.location.href = '/news-exhibition/news' + str + '&wd=1&tp1';
+        });
+        $('.keywords').click(function () {
+          var keys = $("input[name='keys']").val();
+          var type_id = $("input[name='type']").val();
+          var type_two_id = $("input[name='type_two']").val();
+          var tags = $("input[name='tags']").val();
+          var str = '?';
+          if (keys) {
+            str += '&keys=' + keys;
+          }
+          if (type_id) {
+            str += '&type_id=' + type_id;
+          }
+          if (type_two_id) {
+            str += '&type_two_id=' + type_two_id;
+          }
+          if (tags) {
+            str += '&tags=' + tags;
+          }
+          window.location.href = '/news-exhibition/news' + str + '&wd=1&tp1';
+        });
+        $('body').click(function (e) {
+          $('.s_b2c2xl').find('.s_b2c2xlbot').stop().slideUp();
+          $('.s_b2c2xltop').removeClass('on');
+        });
+      });
+
+      // $(function () {
+      //     var scrollInertiaNum;
+      //     if (/firefox/.test(navigator.userAgent.toLowerCase())) {
+      //         scrollInertiaNum = 200;
+      //     } else {
+      //         scrollInertiaNum = 200;
+      //     }
+      //     $(".he_height").mCustomScrollbar({
+      //         theme: 'dark',
+      //         scrollInertia: scrollInertiaNum,
+      //         horizontalScroll: false,
+      //         axis: "y",
+      //     });
+      // });
+      // 锚点
+      var test = window.location.href.split('&tp');
+      if (!isNaN(test[1])) {
+        $('html,body').animate(
+          {
+            scrollTop: $('.he_d1bxli[data-num="' + test[1] + '"]').offset().top - 50,
+          },
+          700
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,416 @@
+<!--
+ * @Author: ZhouQishun
+ * @Date: 2024-01-04 10:41:56
+ * @LastEditTime: 2024-01-04 10:47:01
+ * @LastEditors: ZhouQishun
+ * @Description: 1.0.0
+ * @FilePath: \afceshixin.weibaoke.com.cn\template\pc\lists_guestbook.htm
+ *
+-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<meta name="renderer" content="webkit" />
+	<title>{$eyou.field.seo_title}-{eyou:global name='web_name' /}</title>
+	<meta name="description" content="{$eyou.field.seo_description}" />
+	<meta name="keywords" content="{$eyou.field.seo_keywords}" />
+
+	{eyou:static file='skin/css/iframe.css' /}
+	<!-- public start -->
+
+	{eyou:static file='skin/css/bootstrap.min-v3.3.5.css' /}
+	{eyou:static file='skin/css/slick.css' /}
+
+	{eyou:static file='skin/css/slick-theme.css' /}
+
+	{eyou:static file='skin/css/animate.min.css' /}
+
+	{eyou:static file='skin/css/base-v1.4.css' /}
+
+	{eyou:static file='skin/css/jquery.mCustomScrollbar.min.css' /}
+
+	{eyou:static file='skin/css/animate.min.css' /}
+
+	{eyou:static file='skin/css/iconfont.css' /}
+
+	{eyou:static file='skin/css/main.css' /}
+
+	{eyou:static file='skin/css/media.css' /}
+
+	{eyou:static file='skin/css/he_base.css' /}
+
+	{eyou:static file='skin/css/swiper.min.css' /}
+</head>
+
+<body>
+	<div class="he_nyym he_k2ym">
+
+		{eyou:include file="head.htm" /}
+
+		<!-- 内页banner -->
+		<div class="he_banbx he_banbx1">
+			<div class="he_banli">
+				<div class="he_banig">
+					<img src="{$eyou.field.typelitpic}" class="he_banpc" alt="">
+					<img src="{$eyou.field.typelitpic}" class="he_banph" alt="">
+				</div>
+				<!-- banner文字 -->
+				<div class="he_bante">
+					<div class="he_conten1">
+						<div class="he_bantnv">
+							<div class="he_bantti1">
+								<h1>{$eyou.field.typename}</h1>
+							</div>
+							<div class="he_c03xioti">
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 招聘 -->
+				<div class="he_k2zhp">
+					{eyou:type typeid="86" id="field"}
+					<div class="he_k2zhpli fl">
+						<a href="{$field.typeurl}" target="_self">
+							<div class="he_k2zhjx">
+								<div class="he_k2zhjxv clearfix">
+									<div class="he_k2zhjle fl">
+										<div class="he_k2zhjic">
+											<img src="{eyou:global name='web_templets_pc' /}/skin/img/k2iv1.svg" alt="k2iv1.svg" />
+										</div>
+										<div class="he_k2zhjte">
+											<p>{$field.typename}</p>
+										</div>
+									</div>
+									<div class="he_k2zhjri fl">
+										<img src="{eyou:global name='web_templets_pc' /}/skin/img/k2iv3.svg" alt="" />
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					{/eyou:type}
+					{eyou:type typeid="87" id="field"}
+					<div class="he_k2zhpli fl">
+						<a href="{$field.typeurl}" target="_self">
+							<div class="he_k2zhjx">
+								<div class="he_k2zhjxv clearfix">
+									<div class="he_k2zhjle fl">
+										<div class="he_k2zhjic">
+											<img src="{eyou:global name='web_templets_pc' /}/skin/img/k2iv2.svg" alt="k2iv2.svg" />
+										</div>
+										<div class="he_k2zhjte">
+											<p>{$field.typename}</p>
+										</div>
+									</div>
+									<div class="he_k2zhjri fl">
+										<img src="{eyou:global name='web_templets_pc' /}/skin/img/k2iv3.svg" alt="" />
+									</div>
+								</div>
+							</div>
+						</a>
+					</div>
+					{/eyou:type}
+
+
+				</div>
+			</div>
+		</div>
+		<!-- 主体内容 -->
+		<div class="he_main">
+			<!--面包屑-->
+			<div class="he_bordkm">
+				<div class="s_cont1360">
+					<div class="he_bordul clearfix">
+						<div class="he_bordfr fl">
+							<a href="/"> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi1.svg" alt=""
+									class="he_int1" /> <img src="{eyou:global name='web_templets_pc' /}/skin/img/bordi2.svg" alt=""
+									class="he_int2" /> </a>
+						</div>
+						<div class="he_bordli fl">
+							&gt;
+							{eyou:position style=' '/}
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="he_k2p1">
+				<div class="he_conten1">
+					<div class="he_k2p1n">
+						<div class="he_k2p1nti">
+							<h2 class="he_x40ft">Afore New Energy advocates that everyone is a talented person, and that business
+								value and staff value grow together.</h2>
+							<!-- <h2 class="he_x40ft">Talent concept is the cornerstone of our common growth</h2>  -->
+						</div>
+						<div class="he_k2p1nkc clearfix">
+							<div class="he_k2p1nle fl">
+								<img src="{eyou:global name='web_templets_pc' /}/skin/img/jiarutoubu001.jpg" alt="" />
+							</div>
+							<div class="he_k2p1nri fl">
+								<div class="he_k2p1nut">
+									<div class="he_k2p1nvc">
+										<p>Solid as a rock</p>
+									</div>
+									<div class="he_k2p1nz">
+										<p>Firmly promote global energy reform</p>
+										<!-- <p>Firmly believe in concentration and long-term power</p>  -->
+									</div>
+								</div>
+								<div class="he_k2p1nut">
+									<div class="he_k2p1nvc">
+										<p>have both ability and political integrity</p>
+									</div>
+									<div class="he_k2p1nz">
+										<p>Be realistic and pragmatic, cooperate and share</p>
+										<!--  <p>Be a reliable person and do a reliable thing</p>  -->
+									</div>
+								</div>
+								<div class="he_k2p1nut">
+									<div class="he_k2p1nvc">
+										<p>far-named</p>
+									</div>
+									<div class="he_k2p1nz">
+										<p>Internationalized vision supports global strategic layout</p>
+										<!-- <p>Shoulder the great mission of creating a new era of smart energy</p> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="s_b7cont2 s_cont1360">
+				<div class="s_b7cont2qh">
+					<div class="s_b2_2c1top3   g_fadeup1"></div>
+					<div class="s_b7mian">
+						{eyou:list loop="10" }
+						<div class="s_b7new wow g_fadeup1">
+							<a>
+								<div class="s_b7newtop clearfix">
+									<div class="s_b7newtopr">
+										<img src="" alt="">
+									</div>
+									<div class="s_b7newtopl fl font1">
+										<!-- <h4>
+                                     Position Title &nbsp;&nbsp;{$field.title} &nbsp;&nbsp;&nbsp;&nbsp;Contact US:&nbsp;&nbsp;info@aforenergy.com
+                                  </h4> -->
+										<h4>
+											{$field.title} &nbsp;&nbsp;&nbsp;&nbsp;Contact US:&nbsp;&nbsp;info@aforenergy.com
+										</h4>
+									</div>
+								</div>
+								<div class="s_b7newbot">
+									<div class="s_b7newbotop">
+										<span>
+											Number of recruits:
+										</span>
+										<span>
+											Post salary:
+										</span>
+										<span>
+											Education:
+										</span>
+										<span>
+											Release time:
+										</span>
+									</div>
+									<div class="s_b7newbotnr clearfix">
+										<div class="s_b7newbotnrl font1 fl">
+											<h4>
+												gangweijieshao
+											</h4>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						{/eyou:list}
+					</div>
+				</div>
+			</div>
+
+			<div class="he_k2p2" style="display: none;">
+				<div class="he_conten1">
+					<div class="he_k2p2n clearfix">
+						<div class="he_k2p2nle fl">
+							<div class="he_k2p2nti">
+								<h2 class="he_x40ft">Lead your development with actions</h2>
+							</div>
+							<div class="he_k2p2ntkc">
+								<p>Afore adheres to the concept of growing together with talents</p>
+								<p>Committed to providing you with rich resources and projects, creating a win-win situation and
+									welcoming the future<br /></p>
+								<p><br /></p>
+							</div>
+							<div class="he_k2p2ncd">
+								<div class="he_k2p2nkli on">
+									<div class="he_k2p2nkfg clearfix">
+										<div class="he_k2p2nkhri fl">
+											<p> Growth and development</p>
+										</div>
+										<div class="he_k2p2nkhle fl">
+											<div class="he_k2p2nkhkg">
+												<img src="{eyou:global name='web_templets_pc' /}/skin/img/k5ctp1.svg" alt="" />
+											</div>
+										</div>
+									</div>
+									<div class="he_k2p2npd" style="display: block;">
+										<p> We have customized a training plan for each new employee to answer your questions and enable you
+											accurately. A special training program for new year's chicks and a one-to-one "tutorial system"
+											coaching program were carried out, with technical talents closely accompanied and outstanding
+											peers, to achieve better ourselves.</p>
+									</div>
+								</div>
+								<div class="he_k2p2nkli ">
+									<div class="he_k2p2nkfg clearfix">
+										<div class="he_k2p2nkhri fl">
+											<p> When the culture is in progress</p>
+										</div>
+										<div class="he_k2p2nkhle fl">
+											<div class="he_k2p2nkhkg">
+												<img src="{eyou:global name='web_templets_pc' /}/skin/img/k5ctp1.svg" alt="" />
+											</div>
+										</div>
+									</div>
+									<div class="he_k2p2npd">
+										<p> We always regard training talents as the top priority of the company's development. Each
+											training program is designed to cultivate talents more deeply and help you grow better and faster
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="he_k2p2nri fl">
+							<img src="{eyou:global name='web_templets_pc' /}/skin/img/jiaru002.jpg" alt="2-141.jpg" />
+							<img src="{eyou:global name='web_templets_pc' /}/skin/img/jiaru002.jpg" alt="2.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="he_k2p3" style="display: none;">
+				<!-- on控制左文右图 -->
+				<div class="he_k2p3li ">
+					<div class="he_conten1">
+						<div class="he_k2p3lk clearfix">
+							<div class="he_k2p3lkle fl">
+								<img src="{eyou:global name='web_templets_pc' /}/skin/img/jiaru002.jpg" alt="richangxingfu-946.jpg" />
+								<img src="{eyou:global name='web_templets_pc' /}/skin/img/jiaru002.jpg" alt="guzhiyue.jpg" />
+							</div>
+							<div class="he_k2p3lkri fl">
+								<div class="he_k2p3lkti">
+									<h2 class="he_x40ft">In afore, we create beauty together</h2>
+								</div>
+								<div class="he_k2p2ntkc">
+									<p><span style="font-size: 14px;">Here, we can enjoy our work and life together，</span></p>
+									<p><span style="font-size: 14px;">We are not only partners working side by side, but also warm and
+											close family members.</span></p>
+									<p><br /></p>
+								</div>
+								<div class="he_k2p3lkhc">
+									<div class="he_k2p3lyli on">
+										<div class="he_k2p3lyyu">
+											<p>Daily happiness</p>
+										</div>
+										<div class="he_k2p3lyuc" style="display: block;">
+											<p>In the morning, start with a cup of hot coffee in the rest area; At noon, every meal in the
+												canteen wants to taste; In the afternoon, come to the roof garden to sit in the sun and drink a
+												cup of tea; After a busy day, return to a comfortable home.</p>
+										</div>
+									</div>
+									<div class="he_k2p3lyli ">
+										<div class="he_k2p3lyyu">
+											<p>Charming culture</p>
+										</div>
+										<div class="he_k2p3lyuc">
+											<p>We put humanistic care into your work and life. Let you discover the beauty of life under the
+												influence of our culture.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="he_k2p3li on">
+					<div class="he_conten1">
+						<div class="he_k2p3lk clearfix">
+							<div class="he_k2p3lkle fl">
+								<img src="{eyou:global name='web_templets_pc' /}/skin/img/jiaru002.jpg" alt="jiankang.jpg" />
+								<img src="{eyou:global name='web_templets_pc' /}/skin/img/jiaru002.jpg" alt="3.jpg" />
+							</div>
+							<div class="he_k2p3lkri fl">
+								<div class="he_k2p3lkti">
+									<h2 class="he_x40ft">Your physical and mental health is under our care</h2>
+								</div>
+								<div class="he_k2p2ntkc">
+								</div>
+								<div class="he_k2p3lkhc">
+									<div class="he_k2p3lyli on">
+										<div class="he_k2p3lyyu">
+											<p>Health security</p>
+										</div>
+										<div class="he_k2p3lyuc" style="display: block;">
+											<p>Regular annual physical examination every year will ensure your health.</p>
+										</div>
+									</div>
+									<div class="he_k2p3lyli ">
+										<div class="he_k2p3lyyu">
+											<p>Heart care</p>
+										</div>
+										<div class="he_k2p3lyuc">
+											<p>We actively implement the EAP psychological assistance program to help you relieve the
+												psychological pressure of work and life, and create a peaceful and comfortable spiritual
+												paradise for you.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer -->
+
+
+		{eyou:include file="bottom.htm" /}
+		<!-- public end -->
+		<script>
+			new WOW().init();
+		</script>
+		<script>
+			$('.he_k2p2nkli').hover(function () {
+				$(this).find('.he_k2p2npd').stop().slideDown();
+				$(this).addClass('on');
+				$(this).siblings().find('.he_k2p2npd').stop().slideUp();
+				$(this).siblings().removeClass('on');
+			})
+
+			$('.he_k2p3lyli').hover(function () {
+				$(this).find('.he_k2p3lyuc').stop().slideDown();
+				$(this).addClass('on');
+				$(this).siblings().find('.he_k2p3lyuc').stop().slideUp();
+				$(this).siblings().removeClass('on');
+			})
+			$('.he_k2p2nkli').hover(function () {
+				var qiehuan1 = $(this).index();
+				$('.he_k2p2nri img').eq(qiehuan1).stop().fadeIn().siblings().stop().hide();
+			})
+			$('.he_k2p3lyli').hover(function () {
+				var qiehuan2 = $(this).index();
+				$(this).parents('.he_k2p3lk').find('.he_k2p3lkle img').eq(qiehuan2).stop().fadeIn().siblings().stop().hide();
+			})
+
+		</script>
+
+</body>
+
+</html>

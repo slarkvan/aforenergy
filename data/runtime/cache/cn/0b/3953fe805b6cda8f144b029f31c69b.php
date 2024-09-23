@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+a:4:{s:23:"system_old_product_attr";s:1:"0";s:17:"system_originlist";s:16:"["\u7f51\u7edc"]";s:27:"system_codelogic_1638857408";s:546:"7f9bAQBSAlVUAgFRBgMLB1YGUQRXVgdWXAcGC1VsFVkHAVBkRyt0JwNzdSNnW2d0NXBtbyNsKXJpJyxwZWVmeUBpZmRhJFcnCEJyMF16a2ZSXmNzMGcjaHoSImBEdn5vcXpjclwwZCYMVmYwBwZxYwQCemUaXjNnago8d0RmdmkHA3BgAQF4IRxzUjBRZWlgJVVmYDRzBHNfMyhiVA5kalBlaXVhBXckE3B1NWRbZ2QxB1ZmFWlOZGRJPklgRWsXQnRcBkkmAgQVd21ORllQBBMAf15WbQReDQQwR0V/YQtTVn9bUg94C1B2Z1Z4Z2RbPx0BfxJBFHVWFgF4XxxRbV1pUWtDE1A3VQdIIgR5Z1AKVERmIQQndXtWImZycUBgdFtpeWIgdy4wcAAiZ2JQUTZ3dnowdDR9fh5dZHdbB2FmclRmYSAGNCd0ZDdicn1WJlUPdjpjJ2R8MRxkZVBTbXhmaXRiNGMxMgN7JGFiYUY2RVh2OlINdnwCNFRablYJXUcFYUEWS05TRQArd3FceyRVYW0zZFUSZQ";s:14:"system_vertify";s:152:"{"captcha":{"guestbook":{"is_on":"0","config":{"codeSet":"2345678abcdefhijkmnpqrstuvwxyz","fontSize":"35","useCurve":"0","useNoise":"0","length":"4"}}}}";}
