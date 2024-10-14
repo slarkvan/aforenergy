@@ -17,11 +17,11 @@ return array(
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'testwebaforener',
+    'database'        => 'www_aforenergia_',
     // 用户名
-    'username'        => 'testwebaforener',
+    'username'        => 'www_aforenergia_',
     // 密码
-    'password'        => 'm7ALFeMS8ZsRCByd',
+    'password'        => 'bnj1XcZnkWWekzi5',
     // 端口
     'hostport'        => '3306',
     // 连接dsn
